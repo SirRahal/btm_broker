@@ -11,7 +11,7 @@ return (false);
 return (true);
 }
 </SCRIPT>
-<?
+<?php
 $idp = $_POST['id'];
 $template_id = $_POST['template_id'];
 switch(@$_POST['action'])
@@ -172,60 +172,60 @@ break;
 if (isset($msg) && strlen(trim($msg)) > 0) {
 ?>
 <br><table width="75%" align="center"><tr><td>
-    <span class="message"><div align="center"> <?=$msg?> </div></span>
+    <span class="message"><div align="center"> <?php echo $msg?> </div></span>
 </td></tr></table> 
-<?
+<?php
       }
 ?>
 <br />
 <table align="center" width="95%" cellspacing="2" cellpadding="2" border="1">
-<?
+<?php
 template_list('SELECT TEMPLATE ', $template_id);
 ?>
 
 
 <form action="<?php echo $_server['php-self'];?>" method="post" onsubmit="return Validate(this)">
-<input type="hidden" name="id"  value="<?if (strlen($idp)>0){echo $idp;}else{echo $template_id;}?>" />
+<input type="hidden" name="id"  value="<?php if (strlen($idp)>0){echo $idp;}else{echo $template_id;}?>" />
 
 <tr>
 	<th colspan="3" align="center">
 	
-<?
+<?php
 switch(@$_POST['action'])
 {
 default:
 ?>
 ADD TEMPLATE
-<?
+<?php
 break;
 case 'ADD':
 ?>
 EDIT TEMPLATE
-<?
+<?php
 break;
 case 'CHOOSE TEMPLATE':
 ?>
 EDIT TEMPLATE
-<?
+<?php
 break;
 }
 ?>	
 </th>
 </tr>
-<?
+<?php
 category_list($type2);
 ?>
-<td>TEMPLATE NAME:<br /><input type="text" name="ud_name"  size="30" maxlength="30" value="<? echo "$name"; ?>" /></td>
-	<td>YEAR:<br /><input type="text" name="ud_year" size="15" maxlength="4"  value="<? echo "$year"; ?>" /></td>
-	<td>PRICE: <br /><input type="text" name="ud_price"  size="15" maxlength="15" value="<? echo "$price"; ?>" /></td>
+<td>TEMPLATE NAME:<br /><input type="text" name="ud_name"  size="30" maxlength="30" value="<?php echo "$name"; ?>" /></td>
+	<td>YEAR:<br /><input type="text" name="ud_year" size="15" maxlength="4"  value="<?php echo "$year"; ?>" /></td>
+	<td>PRICE: <br /><input type="text" name="ud_price"  size="15" maxlength="15" value="<?php echo "$price"; ?>" /></td>
 </tr>
 <tr>
-	<td>MFG:<br /><input type="text" name="ud_mfg"  size="30" maxlength="30" value="<? echo "$mfg"; ?>" /></td>
-	<td>MODEL:<br /><input type="text" name="ud_model"  size="30" maxlength="30" value="<? echo "$model"; ?>" /></td>
-	<td>PART NAME:<br /><input type="text" name="ud_part_name"  size="30" maxlength="30" value="<? echo "$part_name"; ?>" /></td>
+	<td>MFG:<br /><input type="text" name="ud_mfg"  size="30" maxlength="30" value="<?php echo "$mfg"; ?>" /></td>
+	<td>MODEL:<br /><input type="text" name="ud_model"  size="30" maxlength="30" value="<?php echo "$model"; ?>" /></td>
+	<td>PART NAME:<br /><input type="text" name="ud_part_name"  size="30" maxlength="30" value="<?php echo "$part_name"; ?>" /></td>
 </tr>
 <tr>
-	<td>PIC FILE NAME:<br /><input type="text" name="ud_pic1"  size="15" maxlength="15" value="<? echo "$pic1"; ?>" /></td>
+	<td>PIC FILE NAME:<br /><input type="text" name="ud_pic1"  size="15" maxlength="15" value="<?php echo "$pic1"; ?>" /></td>
 	<td></td>
 	<td>
 	<table cellspacing="0" cellpadding="0" border="0">
@@ -234,56 +234,56 @@ category_list($type2);
 	<td align="left">ADD PER:</td>
 </tr>
 <tr>
-	<td><input type="text" name="ud_shipping" size="15" maxlength="15" value="<? echo "$shipping"; ?>" /></td>
-	<td><input type="text" name="ud_shipping2" size="10" maxlength="15" value="<? echo "$shipping2"; ?>" /></td>
+	<td><input type="text" name="ud_shipping" size="15" maxlength="15" value="<?php echo "$shipping"; ?>" /></td>
+	<td><input type="text" name="ud_shipping2" size="10" maxlength="15" value="<?php echo "$shipping2"; ?>" /></td>
 </tr>
 </table>
 	</td>
 </tr>
 <tr>
 	<td></td>
-	<td><input type="text" name="ud_a1" size="30" maxlength="30" value="<? echo "$disc_a1"; ?>" /></td>
-	<td><input type="text" name="ud_a2" size="30" maxlength="30" value="<? echo "$disc_a2"; ?>" /></td>
+	<td><input type="text" name="ud_a1" size="30" maxlength="30" value="<?php echo "$disc_a1"; ?>" /></td>
+	<td><input type="text" name="ud_a2" size="30" maxlength="30" value="<?php echo "$disc_a2"; ?>" /></td>
 </tr>
 <tr>
 	<td></td>
-	<td><input type="text" name="ud_b1" size="30" maxlength="30"  value="<? echo "$disc_b1"; ?>"/></td>
-	<td><input type="text" name="ud_b2" size="30" maxlength="30"  value="<? echo "$disc_b2"; ?>"/></td>
+	<td><input type="text" name="ud_b1" size="30" maxlength="30"  value="<?php echo "$disc_b1"; ?>"/></td>
+	<td><input type="text" name="ud_b2" size="30" maxlength="30"  value="<?php echo "$disc_b2"; ?>"/></td>
 </tr>
 <tr>
 	<td></td>
-	<td><input type="text" name="ud_c1" size="30" maxlength="30" value="<? echo "$disc_c1"; ?>" /></td>
-	<td><input type="text" name="ud_c2" size="30" maxlength="30" value="<? echo "$disc_c2"; ?>" /></td>
+	<td><input type="text" name="ud_c1" size="30" maxlength="30" value="<?php echo "$disc_c1"; ?>" /></td>
+	<td><input type="text" name="ud_c2" size="30" maxlength="30" value="<?php echo "$disc_c2"; ?>" /></td>
 </tr>
 <tr>
 	<td></td>
-	<td><input type="text" name="ud_d1" size="30" maxlength="30" value="<? echo "$disc_d1"; ?>" /></td>
-	<td><input type="text" name="ud_d2" size="30" maxlength="30" value="<? echo "$disc_d2"; ?>" /></td>
+	<td><input type="text" name="ud_d1" size="30" maxlength="30" value="<?php echo "$disc_d1"; ?>" /></td>
+	<td><input type="text" name="ud_d2" size="30" maxlength="30" value="<?php echo "$disc_d2"; ?>" /></td>
 </tr>
 <tr>
 	<td></td>
-	<td><input type="text" name="ud_e1" size="30" maxlength="30" value="<? echo "$disc_e1"; ?>" /></td>
-	<td><input type="text" name="ud_e2" size="30" maxlength="30"  value="<? echo "$disc_e2"; ?>"/></td>
+	<td><input type="text" name="ud_e1" size="30" maxlength="30" value="<?php echo "$disc_e1"; ?>" /></td>
+	<td><input type="text" name="ud_e2" size="30" maxlength="30"  value="<?php echo "$disc_e2"; ?>"/></td>
 </tr>
 <tr>
 	<td></td>
-	<td><input type="text" name="ud_f1" size="30" maxlength="30" value="<? echo "$disc_f1"; ?>" /></td>
-	<td><input type="text" name="ud_f2" size="30" maxlength="30" value="<? echo "$disc_f2"; ?>" /></td>
+	<td><input type="text" name="ud_f1" size="30" maxlength="30" value="<?php echo "$disc_f1"; ?>" /></td>
+	<td><input type="text" name="ud_f2" size="30" maxlength="30" value="<?php echo "$disc_f2"; ?>" /></td>
 </tr>
 <tr>
 	<td></td>
-	<td><input type="text" name="ud_g1" size="30" maxlength="30" value="<? echo "$disc_g1"; ?>" /></td>
-	<td><input type="text" name="ud_g2" size="30" maxlength="30" value="<? echo "$disc_g2"; ?>" /></td>
+	<td><input type="text" name="ud_g1" size="30" maxlength="30" value="<?php echo "$disc_g1"; ?>" /></td>
+	<td><input type="text" name="ud_g2" size="30" maxlength="30" value="<?php echo "$disc_g2"; ?>" /></td>
 </tr>
 <tr>
 	<td>	</td>
-	<td><input type="text" name="ud_h1" size="30" maxlength="30" value="<? echo "$disc_h1"; ?>" /></td>
-	<td><input type="text" name="ud_h2" size="30" maxlength="30" value="<? echo "$disc_h2"; ?>" /></td>
+	<td><input type="text" name="ud_h1" size="30" maxlength="30" value="<?php echo "$disc_h1"; ?>" /></td>
+	<td><input type="text" name="ud_h2" size="30" maxlength="30" value="<?php echo "$disc_h2"; ?>" /></td>
 </tr>
 <tr>
-	<td colspan="3" align="center"><textarea cols="75%" rows="10" name="ud_memo"><? echo "$memo"; ?></textarea></td>
+	<td colspan="3" align="center"><textarea cols="75%" rows="10" name="ud_memo"><?php echo "$memo"; ?></textarea></td>
 </tr>
-<?
+<?php
 switch(@$_POST['action'])
 {
 default:
@@ -292,7 +292,7 @@ default:
 	<td colspan="3" align="center"><br />
 	<input type="submit" name="action" id="action" value="ADD"/><br /><br /></td>
 </tr>
-<?
+<?php
 break;
 case 'ADD':
 ?>
@@ -300,10 +300,10 @@ case 'ADD':
 	<td colspan="3" align="center"><br />
 	<input type="submit" name="action" id="action" value="EDIT"/>
 	&nbsp;&nbsp;&nbsp;&nbsp;
-	<input type="submit" name="action" id="action" value="DELETE"	onclick="return confirm('Are you sure you want to delete the <?=$name?> Template?');"	/>
+	<input type="submit" name="action" id="action" value="DELETE"	onclick="return confirm('Are you sure you want to delete the <?php echo $name?> Template?');"	/>
 	<br /><br /></td>
 </tr>
-<?
+<?php
 break;
 case 'EDIT':
 ?>
@@ -311,10 +311,10 @@ case 'EDIT':
 	<td colspan="3" align="center"><br />
 	<input type="submit" name="action" id="action" value="EDIT"/>
 	&nbsp;&nbsp;&nbsp;&nbsp;
-	<input type="submit" name="action" id="action" value="DELETE"	onclick="return confirm('Are you sure you want to delete the <?=$name?> Template?');"	/>
+	<input type="submit" name="action" id="action" value="DELETE"	onclick="return confirm('Are you sure you want to delete the <?php echo $name?> Template?');"	/>
 	<br /><br /></td>
 </tr>
-<?
+<?php
 break;
 case 'CHOOSE TEMPLATE':
 ?>
@@ -322,10 +322,10 @@ case 'CHOOSE TEMPLATE':
 	<td colspan="3" align="center"><br />
 	<input type="submit" name="action" id="action" value="EDIT"/>
 	&nbsp;&nbsp;&nbsp;&nbsp;
-	<input type="submit" name="action" id="action" value="DELETE" onclick="return confirm('Are you sure you want to delete the <?=$name?> Template?');" />
+	<input type="submit" name="action" id="action" value="DELETE" onclick="return confirm('Are you sure you want to delete the <?php echo $name?> Template?');" />
 	<br /><br /></td>
 </tr>
-<?
+<?php
 break;
 case 'DELETE':
 ?>
@@ -333,7 +333,7 @@ case 'DELETE':
 	<td colspan="3" align="center"><br />
 	<input type="submit" name="action" id="action" value="ADD"/><br /><br /></td>
 </tr>
-<?
+<?php
 break;
 }
 ?>

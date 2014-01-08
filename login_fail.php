@@ -11,7 +11,7 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
     </span>   
     <br><br>
 		</div>
-<?
+<?php
 }
 if(empty($_SESSION['LoggedIn']) && empty($_SESSION['Username']))
 {
@@ -22,7 +22,7 @@ if(empty($_SESSION['LoggedIn']) && empty($_SESSION['Username']))
     <h2> Please Check Your Username and Password And Try Again </h2></div>
   </span>
     <table border="2" width="50%"><tr><td><br>
-    <?
+    <?php
      login_form ();
      ?>      
 </td></tr></table>

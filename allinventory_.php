@@ -1,4 +1,4 @@
-<?
+<?php
 $a=array();
 $get_link = "SELECT * FROM `link` WHERE type<=6 ORDER BY id ASC"; 
 $link=mysql_query($get_link);
@@ -20,7 +20,7 @@ else
   echo ""; 
 ?> 
 <br />
-<?
+<?php
 $j=0;
 while ($j < $num2) {
 $item_id=mysql_result($link,$j,"item_id");
@@ -58,19 +58,19 @@ array_push($a,$item_id);
 else
   echo "<br />"; 
 ?> 
-<a href="index.php?ac=item&type=<?=$id?>&page=<?=$j?>&max=<?=$num2?>&cat=<?=$title?>&machine=1">
-<img src="pic/thumbnail/RTM Auction Machines <? echo "$pic1"; ?>.jpg" width="100" height="75" alt="" border="0" /><br /><? echo "$year"; ?> <? echo "$mfg"; ?><br><? echo "$model"; ?></a>
-<?
+<a href="index.php?ac=item&type=<?php echo$id?>&page=<?php echo$j?>&max=<?php echo$num2?>&cat=<?php echo$title?>&machine=1">
+<img src="pic/thumbnail/RTM Auction Machines <?php echo "$pic1"; ?>.jpg" width="100" height="75" alt="" border="0" /><br /><?php echo "$year"; ?> <?php echo "$mfg"; ?><br><?php echo "$model"; ?></a>
+<?php
 if ($_SESSION['Admin']==1)
 {
 ?>
-<br><a href="manage/index.php?ac=edit_item&id=<?=$item_id?>">Edit Item</a>
-<?
+<br><a href="manage/index.php?ac=edit_item&id=<?php echo$item_id?>">Edit Item</a>
+<?php
 }
 
 ?>
 </div>
-<?
+<?php
 }
 ++$j;
 } 

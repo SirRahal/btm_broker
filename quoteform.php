@@ -163,9 +163,9 @@ $mail_sent = @mail( $to, $subject, $message, $headers );
 		</td>		
 		</tr>
 		</table>
-		<input type="hidden" name="part_number" value="<? echo "$part_number"; ?>" />
-		<input type="hidden" name="price2" value="<? echo "$price"; ?>" />
-		<input type="hidden" name="product" value="<? echo "$year",' ',"$mfg",' ',"$model",' ',"$part_name"; ?>" />
+		<input type="hidden" name="part_number" value="<?php echo "$part_number"; ?>" />
+		<input type="hidden" name="price2" value="<?php echo "$price"; ?>" />
+		<input type="hidden" name="product" value="<?php echo "$year",' ',"$mfg",' ',"$model",' ',"$part_name"; ?>" />
 		<input type="hidden" name="quote" value="1" />
 		
 		

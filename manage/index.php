@@ -30,8 +30,8 @@ if ($admin==1){
 <!-- END OF HEADER SECTION -->
 <!-- START OF MAIN CONTENT SECTION -->
 <div id="Content">
-<div align="center"><?include("seim.html");?></div>
-<?
+<div align="center"><?php include("seim.html");?></div>
+<?php
 switch(@$_GET['ac'])
 {
 default:
@@ -82,17 +82,17 @@ break;
 
 <!--START MENU SECTION HERE-->
 <div id="Menu">
-<?
+<?php
 include("../login.php");
 ?> 
 <div id="Menu-box">
-<? include ("left_menu.php");?>
+<?php include ("left_menu.php");?>
 </div>
 </div>
 <!--END MENU SECTION HERE-->	
 </body>
 </html>
-<?
+<?php
 }
 else{
 

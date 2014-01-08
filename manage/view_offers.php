@@ -42,8 +42,8 @@ $num2=mysql_numrows($result2);
 ?>
 
 <br />
-<div align="center">You Have <? echo "$num2"; ?> Active Offer Made<br />
-<?
+<div align="center">You Have <?php echo "$num2"; ?> Active Offer Made<br />
+<?php
 $j=0;
 while ($j < $num2) {
 $id=mysql_result($result2,$j,"id");
@@ -69,27 +69,27 @@ $respond_retrive=mysql_result($result2,$j,"respond");
 
 
 
-<A NAME="<? echo "$id"; ?>"></a>
+<A NAME="<?php echo "$id"; ?>"></a>
 <table cellpadding="2" align="center" border="0" cellspacing="2" width="90%">
 <tr>
-	<td align="left"><sup>Name:  <strong><? echo "$name"; ?></strong></sup></td>
-	<td align="left"><sup>Email:  <? echo "$email"; ?></sup></td>
-	<td align="left"><sup>Phone:  <? echo "$phone"; ?></sup></td>
+	<td align="left"><sup>Name:  <strong><?php echo "$name"; ?></strong></sup></td>
+	<td align="left"><sup>Email:  <?php echo "$email"; ?></sup></td>
+	<td align="left"><sup>Phone:  <?php echo "$phone"; ?></sup></td>
 </tr>	
 
 <tr>
-	<td align="center" colspan="3"><sup>Made an Offer on RTM Part #  &nbsp;&nbsp;<strong><? echo "$part_number"; ?></strong>&nbsp;&nbsp; on <? echo "$date"; ?></sup> </td>
+	<td align="center" colspan="3"><sup>Made an Offer on RTM Part #  &nbsp;&nbsp;<strong><?php echo "$part_number"; ?></strong>&nbsp;&nbsp; on <?php echo "$date"; ?></sup> </td>
 </tr>	
 
 <tr>
-	<td align="center" colspan="3"><sup><? echo "$product"; ?></sup> </td>
+	<td align="center" colspan="3"><sup><?php echo "$product"; ?></sup> </td>
 </tr>	
 <tr>
-	<td align="center" colspan="3"><sup>Your Price:  $<? echo "$price"; ?>&nbsp;&nbsp;-&nbsp;&nbsp;Offer Made:  $<? echo "$amount"; ?></sup> </td>
+	<td align="center" colspan="3"><sup>Your Price:  $<?php echo "$price"; ?>&nbsp;&nbsp;-&nbsp;&nbsp;Offer Made:  $<?php echo "$amount"; ?></sup> </td>
 </tr>	
 <tr>
 	<td align="center" colspan="3">	
-	<div align="center"><sup><? echo "$message"; ?></sup></div>	
+	<div align="center"><sup><?php echo "$message"; ?></sup></div>
 	</td>
 </tr>	
 
@@ -98,19 +98,19 @@ $respond_retrive=mysql_result($result2,$j,"respond");
 	<div align="center"><sup>------------------------------------------------------</sup></div>	
 	</td>	
 </tr>	
-	<form action="<?php echo $_server['php-self'];?>#<? echo "$id"; ?>" method="post">
-	<input type="hidden" name="mailid" value="<? echo "$id"; ?>" />
-	<input type="hidden" name="itemid" value="<? echo "$idp"; ?>" />
+	<form action="<?php echo $_server['php-self'];?>#<?php echo "$id"; ?>" method="post">
+	<input type="hidden" name="mailid" value="<?php echo "$id"; ?>" />
+	<input type="hidden" name="itemid" value="<?php echo "$idp"; ?>" />
 <tr>
 <td align="center" colspan="3">
 	<div align="center"><sup>
-	<input type="radio" name="respond" value="1" <?	if ($respond_retrive==1)  
+	<input type="radio" name="respond" value="1" <?php	if ($respond_retrive==1)
 	echo "checked=checked";  
 	?>	/>Accept Offer
-	<input type="radio" name="respond" value="2" <?	if ($respond_retrive==2)  
+	<input type="radio" name="respond" value="2" <?php	if ($respond_retrive==2)
 	echo "checked=checked";  
 	?> />Decline Offer
-	<input type="radio" name="respond" value="3" <?	if ($respond_retrive==3)  
+	<input type="radio" name="respond" value="3" <?php	if ($respond_retrive==3)
 	echo "checked=checked";  
 	?> />Counter Offer
 	</sup></div>	
@@ -118,29 +118,29 @@ $respond_retrive=mysql_result($result2,$j,"respond");
 	</tr>
 	<tr>
 <td align="center" colspan="3">
-	<div align="center"><sup>Price To Offer:  $<input type="text" name="qprice" value="<? echo "$qprice_retrive"; ?>" /></sup></div>	
+	<div align="center"><sup>Price To Offer:  $<input type="text" name="qprice" value="<?php echo "$qprice_retrive"; ?>" /></sup></div>
 	</td>
 </tr>
 
 <tr>
 <td align="center" colspan="3">	
-	<div align="center"><sup>Message to <? echo "$name"; ?>: <textarea cols="75%" rows="5" name="message_sent"><? echo "$message_sent_retrive"; ?></textarea></sup> </div>	
+	<div align="center"><sup>Message to <?php echo "$name"; ?>: <textarea cols="75%" rows="5" name="message_sent"><?php echo "$message_sent_retrive"; ?></textarea></sup> </div>
 	</td>
 </tr>
-<input type="hidden" name="camount" value="<? echo "$amount"; ?>" />
+<input type="hidden" name="camount" value="<?php echo "$amount"; ?>" />
 <tr>
 	<td align="center" colspan="3">	
 		<table cellspacing="2" cellpadding="2" border="0" align="center">
 			<tr>
 				<td><sup><input type="submit" name="action" id="action" value="[SEND]" /></sup></form></td>	
 				<td><form action="<?php echo $_server['php-self'];?>" method="post">
-				<input type="hidden" name="id" value="<? echo "$id"; ?>" />
+				<input type="hidden" name="id" value="<?php echo "$id"; ?>" />
 				<sup><input type="submit" name="action" id="action" value="[DELETE]" /></sup></form>
 				</td>				
 			</tr>
 			<tr>
 	<td align="center" colspan="3">	
-	<div align="center"><sup><? echo "$sent"; ?></sup></div>	
+	<div align="center"><sup><?php echo "$sent"; ?></sup></div>
 	</td>
 </tr>	
 		</table>	
@@ -151,7 +151,7 @@ $respond_retrive=mysql_result($result2,$j,"respond");
 <div>	
 	<br />	
 
-<?
+<?php
 ++$j;
 } 
 

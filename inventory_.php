@@ -1,22 +1,22 @@
-<?
+<?php
 $get_link = "SELECT * FROM `link` WHERE type=$type_id ORDER BY id ASC"; 
 $link=mysql_query($get_link);
 $num2=mysql_numrows($link);
 ?>
 <br />
 
-<?
+<?php
 if ($_SESSION['Admin']==1)
 {
 ?>
-<div align="center"><a href="manage/index.php?ac=edit_inventory&type=<?=$type?>&cat=<?=$cat?>" class="hide"><p class="about"><?=$cat?> - (<?=$num2?>)</p></a></div>
-<?
+<div align="center"><a href="manage/index.php?ac=edit_inventory&type=<?php echo$type?>&cat=<?php echo$cat?>" class="hide"><p class="about"><?php echo$cat?> - (<?php echo$num2?>)</p></a></div>
+<?php
 }
 else
 {
 ?>
-<div align="center"><p class="about"><?=$cat?> - (<?=$num2?>)</p></div>
-<?
+<div align="center"><p class="about"><?php echo$cat?> - (<?php echo$num2?>)</p></div>
+<?php
 }
 ?>
 <?php	
@@ -33,7 +33,7 @@ else
   echo ""; 
 ?> 
 <br />
-<?
+<?php
 $j=0;
 while ($j < $num2) {
 $item_id=mysql_result($link,$j,"item_id");
@@ -55,25 +55,21 @@ $part_name=mysql_result($result2,$k,"part_name");
 else
   echo "<br />"; 
 ?> 
-<a href="index.php?ac=item&type=<?=$type_id?>&page=<?=$j?>&max=<?=$num2?>&cat=<?=$cat?>&year=<?=$year?>&mfg=<?=$mfg?>&model=<?=$model?>&part_name=<?=$part_name?>">
-<img src="pic/thumbnail/RTM Auction Machines <? echo "$pic1"; ?>.jpg" width="100" height="75" alt="" border="0" /><br /><? echo "$year"; ?> <? echo "$mfg"; ?><br><? echo "$model"; ?></a>
-<?
+<a href="index.php?ac=item&type=<?php echo $type_id?>&page=<?php echo $j?>&max=<?php echo $num2?>&cat=<?php echo$cat?>&year=<?php echo $year?>&mfg=<?php echo $mfg?>&model=<?php echo $model?>&part_name=<?php echo $part_name?>">
+<img src="pic/thumbnail/RTM Auction Machines <?php echo "$pic1"; ?>.jpg" width="100" height="75" alt="" border="0" /><br /><?php echo "$year"; ?> <?php echo "$mfg"; ?><br><?php echo "$model"; ?></a>
+<?php
 if ($_SESSION['Admin']==1)
 {
 ?>
-<br><a href="manage/index.php?ac=edit_item&id=<?=$id?>">Edit Item</a>
-<?
+<br><a href="manage/index.php?ac=edit_item&id=<?php echo $id?>">Edit Item</a>
+<?php
 }
 
 ?>
 </div>
 
 
-
-
-
-
-<?
+<?php
 ++$j;
 } 
 

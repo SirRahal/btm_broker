@@ -43,30 +43,30 @@ break;
 <br>
 <div align="center">
 <br>
-<a href="index.php?ac=edit_item&id=<?=$item_id?>">Edit Item</a>&nbsp;&nbsp;
-	 <a href="../index.php?ac=item&id=<?=$item_id?>">View Item</a>
+<a href="index.php?ac=edit_item&id=<?php echo $item_id?>">Edit Item</a>&nbsp;&nbsp;
+	 <a href="../index.php?ac=item&id=<?php echo $item_id?>">View Item</a>
 <br>
-<a href="index.php?ac=edit_item&id=<?=$item_id?>" class="hide">
-		<p class="about"><?=$year ." - ". $mfg ." - ". $model ." - ". $part_name ?></p></a>
+<a href="index.php?ac=edit_item&id=<?php echo $item_id?>" class="hide">
+		<p class="about"><?php echo $year ." - ". $mfg ." - ". $model ." - ". $part_name ?></p></a>
 <br>
 
 <form action="<?php echo $_server['php-self'];?>" method="post">
-<input type="hidden" name="id" value="<?=$item_id?>" />
-<input type="hidden" name="type" value="<?=$type?>" />
-<input type="hidden" name="cat" value="<?=$cat?>" />
+<input type="hidden" name="id" value="<?php echo $item_id?>" />
+<input type="hidden" name="type" value="<?php echo $type?>" />
+<input type="hidden" name="cat" value="<?php echo $cat?>" />
 <table align="center" width="50%" cellspacing="2" cellpadding="2" border="1">
 <tr>
 	<th colspan="2" align="center">	ADD ITEM TO OTHER CATEGORY</th>
 </tr>
 <tr>
 <td align="center" colspan="3">
-<a href="index.php?ac=edit_inventory&type=<?=$item_type?>&cat=<?=$cat?>" class="hide"> 
+<a href="index.php?ac=edit_inventory&type=<?php echo $item_type?>&cat=<?php echo $cat?>" class="hide">
 <p class="about">
-Item Base Category is <?=$cat?>
+Item Base Category is <?php echo $cat?>
 </p></a>
 </td>
 </tr>
-<?
+<?php
 $sql1 = "SELECT * FROM `link` WHERE item_id=$item_id ORDER BY type ASC"; 
 $result1=mysql_query($sql1);
 $num1=mysql_numrows($result1);
@@ -85,28 +85,28 @@ array_push($a,$item_type_get);
 <tr>
 
 <td align ="center" width="75%">
-<a href="index.php?ac=edit_inventory&type=<?=$item_type_get?>&cat=<?=$cat?>" class="hide"> 
-<p class="about"><?=$list_cat?></p></a>
-<input type="hidden" name="link_id" value="<?=$item_type_link_id?>">
+<a href="index.php?ac=edit_inventory&type=<?php echo $item_type_get?>&cat=<?php echo $cat?>" class="hide">
+<p class="about"><?php echo $list_cat?></p></a>
+<input type="hidden" name="link_id" value="<?php echo $item_type_link_id?>">
 </td>
 <td width="25%">
 <input type="submit"  name="action" id="action" value="DELETE" />
 </td>
 </tr>
 </form>
-<?
+<?php
 } 
 ++$j;
 
 }
 ?>
 <form action="<?php echo $_server['php-self'];?>" method="post">
-<input type="hidden" name="part_number" value="<?=$part_number?>">
+<input type="hidden" name="part_number" value="<?php echo $part_number?>">
 <tr>
 <td  align="center" width="75%">
 	ADD CATEGORY: 
 	<select name="ud_type">
-	<?
+	<?php
 $sql = 'SELECT * FROM `type`'; 
 $result=mysql_query($sql);
 $num=mysql_numrows($result);
@@ -121,8 +121,8 @@ if (in_array($type,$a))
 else
 {
 ?>
-	<option value="<?echo "$type";?>">		 <?echo "$category"; ?> </option>	
-<?
+	<option value="<?php echo "$type";?>">		 <?php echo "$category"; ?> </option>
+<?php
 }
 ++$j;
 } 

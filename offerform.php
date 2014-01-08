@@ -1,7 +1,7 @@
 <?php
 
 // Updated 2008-09-21
-// Validate Email Address and Phone -- ©2008 PlasticBrain
+// Validate Email Address and Phone -- ï¿½2008 PlasticBrain
 // www.plasticbrain.net
 // ---------------------------------------------------------
 
@@ -193,10 +193,10 @@ $mail_sent = @mail( $to, $subject, $message, $headers );
 		</td>		
 		</tr>
 		</table>
-		<input type="hidden" name="itemid" value="<? echo "$idp"; ?>" />
-		<input type="hidden" name="part_number" value="<? echo "$part_number"; ?>" />
-		<input type="hidden" name="price2" value="<? echo "$price"; ?>" />
-		<input type="hidden" name="product" value="<? echo "$year",' ',"$mfg",' ',"$model",' ',"$part_name"; ?>" />
+		<input type="hidden" name="itemid" value="<?php echo "$idp"; ?>" />
+		<input type="hidden" name="part_number" value="<?php echo "$part_number"; ?>" />
+		<input type="hidden" name="price2" value="<?php echo "$price"; ?>" />
+		<input type="hidden" name="product" value="<?php echo "$year",' ',"$mfg",' ',"$model",' ',"$part_name"; ?>" />
 		<input type="hidden" name="offer" value="1" />
 		
 		

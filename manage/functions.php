@@ -1,4 +1,4 @@
-<?
+<?php
 
 function curPageURL() {
  $pageURL = 'http';
@@ -27,13 +27,13 @@ $checklogin = mysql_query("SELECT * FROM users WHERE Username = '".$username."' 
 				$_SESSION['UserID'] = $row['UserID'];
 				?>	
 				<meta http-equiv="refresh" content="0; URL=index.php" />
-				<?			
+				<?php
 }
 else
     {        
        ?>
 				<meta http-equiv="refresh" content="0; URL=index.php?ac=fail" />
-        <?
+        <?php
     }
 }
 
@@ -43,20 +43,20 @@ function welcome($admin, $now){
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])){
 $admin=$_SESSION['Admin'];
      ?>
-           <p>Welcome <b><?=$_SESSION['Username']?></b> <br> 
-           <?
+           <p>Welcome <b><?php echo $_SESSION['Username']?></b> <br>
+           <?php
            if ($admin==1){
            if ($now==manage){
            ?>
            <a href="../index.php" class="hide">View Site</a> <br> 
 					 <a href="../logout.php" class="hide">Logout</a> </p> 
-           <?
+           <?php
            }
            else{
            ?>
            <a href="manage/index.php" class="hide">Admin Control Panel</a> <br> 
 					 <a href="logout.php" class="hide">Logout</a> </p> 
-					 <?
+					 <?php
 					 }
 					 }					 
 					 
@@ -67,7 +67,7 @@ $admin=$_SESSION['Admin'];
 
 function login_form (){
 ?>  
-     <form method="post" action="<?=$_SESSION['last_page']?>" >   	 
+     <form method="post" action="<?php echo $_SESSION['last_page']?>" >
      <p>Username:<br>    
      <input type="text" class="text" name="username" id="username" size="14" /><br>      
      Password:<br>      
@@ -75,7 +75,7 @@ function login_form (){
      <input type="checkbox" name="remember" value="1">Remember Me</p>
      <input type="submit" value="Login" />
 		 </form>
-<?
+<?php
 }
 
 //------------------------------------------------------------------------
@@ -89,24 +89,24 @@ $num_template=mysql_numrows($template_list);
 <form action="<?php echo $_server['php-self'];?>" method="post">
 <tr>
 <td colspan="3" align="center"> 
-<?=$template_header?>
+<?php echo $template_header?>
 <select name="template_id">
-<?
+<?php
 	$k=0;
 	while ($k < $num_template) {
 $idt=mysql_result($template_list,$k,"id");
 $tp_name=mysql_result($template_list,$k,"name");
 ?>
-<option value="<?echo "$idt";?>" <?php	if ($idt==$template_id)  
-echo "selected=&quot;selected&quot;";?>>		 <?echo "$tp_name"; ?> </option>
-<?
+<option value="<?php echo "$idt";?>" <?php	if ($idt==$template_id)
+echo "selected=&quot;selected&quot;";?>>		 <?php echo "$tp_name"; ?> </option>
+<?php
 ++$k;
 }
 ?>	
 </select><input type="submit" name="action" id="action"  value="CHOOSE TEMPLATE" />
 </td></tr>
 </form>
-<?
+<?php
 }
 
 //------------------------------------------------------------------------
@@ -120,16 +120,16 @@ $num_type=mysql_numrows($type_list);
 <td colspan="3" align="center">
 CHOOSE CATEGORY: 
 <select name="type">
-<?
+<?php
 	$j=0;
 	while ($j < $num_type) {
 $type=mysql_result($type_list,$j,"type");
 $category=mysql_result($type_list,$j,"category");
 $check_series=mysql_result($type_list,$j,"series");
 ?>
-	<option value="<?echo "$type";?>" <?php	if ($type==$type2) 	echo "selected=&quot;selected&quot;";?> >		
+	<option value="<?php echo "$type";?>" <?php	if ($type==$type2) 	echo "selected=&quot;selected&quot;";?> >
 	 <?echo "$category - $check_series"; ?> </option>	
-<?
+<?php
 ++$j;
 } 
 ?>	
@@ -137,6 +137,6 @@ $check_series=mysql_result($type_list,$j,"series");
 <a href="index.php?ac=add_cat">Add Category</a>
 </td>
 </tr>
-<?
+<?php
 }
 ?>
