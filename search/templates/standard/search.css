@@ -1,0 +1,145 @@
+/*Search page body */
+body {background-color:#FFFFFF; font-family:arial,sans-serif; font-size: 13px; }
+
+/*Top categories*/
+.main_cat1 {font-size: 16px; font-weight: bold; color:#0000FF}
+.main_cat2 {font-size: 12px; font-weight: bold; color:#0000FF}
+.cat1:visited {font-size: 16px; font-weight: bold; color:#5555AA}
+
+/*Small urls*/
+.url {color: #115599}
+
+
+a:visited{color:#5555AA}
+/*hr{color:#000066}*/
+
+/*Page descriptions*/
+.description{font-size: 13px;}
+
+/* */
+td {font-family:arial,sans-serif; font-size: 13px; }
+
+/* Title/link of pages */
+.title{color:#0000FF; font-size:15px}
+
+
+
+
+
+#result_report {
+	text-align:center ;
+	padding:3px;
+	background-color:#e5ecf9; 
+	font-weight: bold;
+	margin-bottom:14px;
+}
+
+.catBanner {
+	padding:3px;
+	margin-top:15px;
+	background-color:#e5ecf9; 
+	font-weight: bold
+}
+.webPageBanner {
+	padding:3px;
+	margin-top:20px;
+	background-color:#e5ecf9; 
+	font-weight: bold
+}
+
+hr{color:#000066;}
+hr.powered{width:550; color: #000066}
+
+/*main results table */
+#results{width: 780;}
+
+h1 {
+	text-align: center;
+	font-family: Verdana, Ariel;
+	font-size:24px;
+	color: #000066;
+	}
+
+#other_pages {
+	text-align:center;
+}
+
+#powered_by {
+	margin:0 auto;
+	margin-top:20px;
+	padding-top:10px;
+	font-size:10px;
+	text-align:center;
+	vertical-align: center;
+}
+
+#common_report {
+		text-align:center;
+}
+
+#cat_table {
+		width:600px;
+		margin-top:20px;
+		padding-top:10px;
+		padding-bottom:20px;
+		border-top:1px solid #AAAAAA;
+		border-bottom:1px solid #AAAAAA;
+
+}
+
+#cat_main {
+	font-weight: bold;
+}
+
+.divline{
+	margin-top:20px;
+	margin-bottom:-5px;
+	border-bottom:1px solid #DDDDDD;
+}
+
+#sub_cat {
+	font-size:12px;
+}
+
+.idented {
+	margin-left:30px;
+}
+
+#did_you_mean {
+	font-size: 14px; 
+	text-align:center ;
+	margin:10px;
+
+}
+#Header {
+	margin:10px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	/* For IE5/Win's benefit height = [correct height] + [top padding] + [top and bottom border widths] */
+	height:122px; /* 14px + 17px + 2px = 33px */
+	border-style:solid;
+	border-color:black;
+	border-width:1px 0px; /* top and bottom borders: 1px; left and right borders: 0px */
+	line-height:11px;
+	background-color:#fff;
+
+/* Here is the ugly brilliant hack that protects IE5/Win from its own stupidity. 
+Thanks to Tantek Celik for the hack and to Eric Costello for publicizing it. 
+IE5/Win incorrectly parses the "\"}"" value, prematurely closing the style 
+declaration. The incorrect IE5/Win value is above, while the correct value is 
+below. See http://glish.com/css/hacks.asp for details. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	height:100px; /* the correct height */
+	}
+/* I've heard this called the "be nice to Opera 5" rule. Basically, it feeds correct 
+length values to user agents that exhibit the parsing error exploited above yet get 
+the CSS box model right and understand the CSS2 parent-child selector. ALWAYS include
+a "be nice to Opera 5" rule every time you use the Tantek Celik hack (above). */
+body>#Header {height:100px;}
+
+#Content {
+	margin:8px 100px 10px 100px;
+	padding:10px;
+	height:AUTO;
+	text-align:left;
+	}
