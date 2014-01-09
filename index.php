@@ -131,15 +131,14 @@ else if ($_SESSION['Admin']==1)
 </div>
 <div id="footer">
 <img src="onepixel.jpg" width="1" height="200" alt="" border="0" /><br />
-<p>These pages, and logos are the property of Reliable Tool &amp; Machine, Inc.<br /> and may not 
-be reproduced without the express written consent of <br />Reliable Tool &amp; Machine, Inc.<br /><br />
-
-Machines are subject to prior sales.   
+<p>These pages, and logos are the property of BTM Broker<br /> and may not
+be reproduced without the express written consent of <br />BTM Broker
+are subject to prior sales.
 </p>
 
 </div>
   <div id="bottom">
- <p> If you find any broken links or have a comment about this web site please contact<br /> <a href="mailto:admin@reliabletoolmachine.com">admin@reliabletoolmachine.com</a>
+ <p> If you find any broken links or have a comment about this web site please contact<br /> <a href="mailto:admin@btmbroker.com">admin@btmbroker.com</a>
  </p>
  </div>
 

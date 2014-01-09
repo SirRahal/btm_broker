@@ -42,7 +42,7 @@ $query = "SELECT * FROM `inventory` WHERE id=$item_id ORDER BY id ASC";
 $result2=mysql_query($query);
 $id=mysql_result($result2,$k,"id");
 $mfg=mysql_result($result2,$k,"mfg");
-$pic1=mysql_result($result2,$k,"pic1"); 
+$pic1=mysql_result($result2,$k,"pic1");
 $year=mysql_result($result2,$k,"year");
 $sold=mysql_result($result2,$k,"sold");
 $model=mysql_result($result2,$k,"model");

@@ -1,6 +1,6 @@
 <!--sphider_noindex--> 
 <?php
-$get_category = mysql_query("SELECT * FROM type"); 
+$get_category = mysql_query("SELECT * FROM type ORDER BY category ASC");
     if(mysql_num_rows($get_category) >= 1){			
 While ($category_list = mysql_fetch_array($get_category)){
 ?>
@@ -8,5 +8,5 @@ While ($category_list = mysql_fetch_array($get_category)){
 <?php
 }
 }else{?>
-        <a href="index.php?ac=inventory&type="> hello</a>
+        <a href="index.php?ac=inventory&type=">Sorry no Categories</a>
     <?php } ?>

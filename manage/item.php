@@ -359,7 +359,7 @@ $msg="The item was Edited!";
 break;
 case 'CHOOSE TEMPLATE':
 $template_id = $_POST['template_id'];
-$query = "SELECT * FROM `template` WHERE id=$template_id"; 
+$query = "SELECT * FROM `template` WHERE id=$template_id";
 $result=mysql_query($query);
 $num2=mysql_numrows($result); 
 ?>
