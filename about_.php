@@ -1,5 +1,5 @@
 <br />	
-	<p class="about">Welcome to Reliable Tool & Machine Inc!  We have been in the 
+	<p class="about">Welcome to BTM Brooker!  We have been in the
 machine tool trade business for over 20 years Most of the 20 
 years has been spent in various manufacturing situations with 
 both manual and CNC machinery.  During this time we 

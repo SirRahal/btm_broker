@@ -237,7 +237,7 @@ else
 ?>  <img src="../pic/thumbnail/RTM Auction Machines <?php echo "$pic1"; ?>.jpg" width="100" height="75" alt="" border="0" /></td>
 	<td align="left"><sup>YEAR:</sup></td>
 	<td align="left"><sup><?php echo "$year"; ?> </sup> </td>
-	<td align="left"><sup>RTM PART #:</sup></td>
+	<td align="left"><sup>BTM PART #:</sup></td>
 	<td align="left"><sup><?php echo "$part_number"; ?> </sup></td>
 </tr>
 <tr>

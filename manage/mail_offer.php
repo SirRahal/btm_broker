@@ -23,19 +23,19 @@ if ($respondl==1) {
 //define the receiver of the email
 $to = $emaill;
 //define the subject of the email
-$subject = 'Responds to Offer From RTM'; 
+$subject = 'Responds to Offer From BTM';
 //define the message to be sent. Each line should be separated with \n
 $mailmessage = "\n
 $namel\n
-Thankyou for the offer made on RTM Part Number $part_numberl. $productl\n 
+Thankyou for the offer made on BTM Part Number $part_numberl. $productl\n
 Your offer of $ $amountl has been accepted\n
 Use buy now with the link below and the amount of your offer will be placed at checkout\n
-http://www.reliabletoolmachine.com/index.php?ac=item&id=$itemidl&accept=$amountl&mailid=$mailid#quote
+http://www.btmbroker.com/index.php?ac=item&id=$itemidl&accept=$amountl&mailid=$mailid#quote
 $message_sent\n\n
-Thankyou\n
-Tim Berridge
-Reliable Tool & Machine, Inc.
-269-217-2390 Phone\n\n
+Thank You\n
+Doug Watkoski
+BTM
+616-745-5953\n\n
 "; 
 //define the headers we want passed. Note that they are separated with \r\n
 $headers = $from . $sales_email . $reply . $sales_email;
@@ -49,17 +49,17 @@ if ($respondl==2) {
 //define the receiver of the email
 $to = $emaill;
 //define the subject of the email
-$subject = 'Responds to Offer From RTM'; 
+$subject = 'Responds to Offer From BTM';
 //define the message to be sent. Each line should be separated with \n
 $mailmessage = "\n
 $namel\n
-Thankyou for the offer made on RTM Part Number $part_numberl. $productl\n 
+Thankyou for the offer made on BTM Part Number $part_numberl. $productl\n
 Your offer of $ $amountl has been declined\n
 $message_sent\n\n
-Thankyou\n
-Tim Berridge
-Reliable Tool & Machine, Inc.
-269-217-2390 Phone\n\n
+Thank You\n
+Doug Watkoski
+BTM
+616-745-5953\n\n
 "; 
 //define the headers we want passed. Note that they are separated with \r\n
 $headers = $from . $sales_email . $reply . $sales_email;
@@ -73,20 +73,20 @@ if ($respondl==3) {
 //define the receiver of the email
 $to = $emaill;
 //define the subject of the email
-$subject = 'Responds to Offer From RTM'; 
+$subject = 'Responds to Offer From BTM';
 //define the message to be sent. Each line should be separated with \n
 $mailmessage = "\n
 $namel\n
-Thankyou for the offer made on RTM Part Number $part_numberl. $productl\n 
+Thank you for the offer made on BTM Part Number $part_numberl. $productl\n
 Your offer of $ $amountl has been declined, however I would accept $ $qpricel.\n
 If you agree to this price\n
 Use buy now with the link below and $qpricel will be placed at checkout\n
-http://www.reliabletoolmachine.com/index.php?ac=item&id=$itemidl&accept=$qpricel&mailid=$mailid#quote
+http://www.btmbroker.com/index.php?ac=item&id=$itemidl&accept=$qpricel&mailid=$mailid#quote
 $message_sent\n\n
-Thankyou\n
-Tim Berridge
-Reliable Tool & Machine, Inc.
-269-217-2390 Phone\n\n
+Thank You\n
+Doug Watkoski
+BTM
+616-745-5953\n\n
 "; 
 //define the headers we want passed. Note that they are separated with \r\n
 $headers = $from . $sales_email . $reply . $sales_email;

@@ -157,7 +157,7 @@ else
 <?php echo "$year",' ',"$mfg",' ',"$model",' ',"$part_name"; ?>
 </h2>
 
-RTM Part Number:  <?php echo "$part_number"; ?>
+BTM Part Number:  <?php echo "$part_number"; ?>
 <br /><br />
 
 <table cellspacing="'4" Cellpadding="6" Border="2" width="75%">

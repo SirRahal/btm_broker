@@ -18,17 +18,17 @@ $reply = "\r\nReply-To: ";
 $sales_email = constant("sales_email");	
 $to = $emaill;
 //define the subject of the email
-$subject = 'Requested Quote From RTM'; 
+$subject = 'Requested Quote From BTM';
 //define the message to be sent. Each line should be separated with \n
 $mailmessage = "\n
 $namel\n
-Thankyou for your request for quote on RTM Part Number $part_numberl. $productl\n
+Thank you for your request for quote on BTM Part Number $part_numberl. $productl\n
 The current price is $ $qprice\n
 $message_sent\n\n
-Thankyou\n
-Tim Berridge
-Reliable Tool & Machine, Inc.
-269-217-2390 Phone\n\n
+Thank You\n
+Doug Watkoski
+BTM
+616-745-5953\n\n
 "; 
 //define the headers we want passed. Note that they are separated with \r\n
 $headers = $from . $sales_email . $reply . $sales_email;

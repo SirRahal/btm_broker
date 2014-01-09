@@ -63,7 +63,7 @@ $sent=mysql_result($result2,$j,"sent");
 </tr>	
 
 <tr>
-	<td align="center" colspan="3"><sup>Requested Quote on RTM Part #  &nbsp;&nbsp;<strong><?php echo "$part_number"; ?></strong>&nbsp;&nbsp; on <?php echo "$date"; ?></sup> </td>
+	<td align="center" colspan="3"><sup>Requested Quote on BTM Part #  &nbsp;&nbsp;<strong><?php echo "$part_number"; ?></strong>&nbsp;&nbsp; on <?php echo "$date"; ?></sup> </td>
 </tr>	
 
 <tr>

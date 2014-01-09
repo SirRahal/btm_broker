@@ -1,7 +1,7 @@
 
 
 <!--$formEmail="mailto:sales@reliabletoolmachine.com" formConfirmPage="" formErrorPage="" defaultURL="http://[SITE_CODE].webhosting.yahoo.com/forms?login=[MEMBER_NAME]&to=[EMAIL]&confirm=[PAGE]&error=[ERROR_PAGE]"$-->
-<form name="form0" method="POST" action="http://us.1.p5.webhosting.yahoo.com/forms?login=shortcake103mom&to=sales@reliabletoolmachine.com&confirm=&error=">
+<form name="form0" method="POST" action="http://us.1.p5.webhosting.yahoo.com/forms?login=shortcake103mom&to=admin@btmbroker.com&confirm=&error=">
 
 
 
@@ -35,7 +35,7 @@
 	<td colspan="2" align="center"><br><br><input type="checkbox" name="Email Specials" checked>&nbsp;<span class="text"><span style="font-size:10px;line-height:13px;">Yes, Please put me on your list for occasional <br soft>e-mail with new arrivals and special priced items!<br soft></span></span></td>
 </tr>
 <tr>
-	<td colspan="2">	<br><br>	<span class="text"><font face="Trebuchet MS" size="4"><span style="font-size:18px;line-height:21px;">Reliable Tool &amp; Machine, Inc.<br>Martin/Grand Rapids, Michigan<br>Phone: 269-217-2390<br>E-mail:</span></font><a href="mailto:sales@reliabletoolmachine.com"><font face="Trebuchet MS" size="4"><span style="font-size:18px;line-height:21px;"> sales@reliabletoolmachine.com<br soft></span></font></a></span>
+	<td colspan="2">	<br><br>	<span class="text"><font face="Trebuchet MS" size="4"><span style="font-size:18px;line-height:21px;">BTM Broker.<br>Grand Rapids, Michigan<br>Phone: 616-259-<br>E-mail:</span></font><a href="mailto:sales@btmbroker.com"><font face="Trebuchet MS" size="4"><span style="font-size:18px;line-height:21px;"> sales@btmbroker.com<br soft></span></font></a></span>
 <br><br>
 </td>
 </tr>

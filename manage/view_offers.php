@@ -78,7 +78,7 @@ $respond_retrive=mysql_result($result2,$j,"respond");
 </tr>	
 
 <tr>
-	<td align="center" colspan="3"><sup>Made an Offer on RTM Part #  &nbsp;&nbsp;<strong><?php echo "$part_number"; ?></strong>&nbsp;&nbsp; on <?php echo "$date"; ?></sup> </td>
+	<td align="center" colspan="3"><sup>Made an Offer on BTM Part #  &nbsp;&nbsp;<strong><?php echo "$part_number"; ?></strong>&nbsp;&nbsp; on <?php echo "$date"; ?></sup> </td>
 </tr>	
 
 <tr>

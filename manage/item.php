@@ -600,7 +600,7 @@ break;
 <form action="index.php?ac=edit_item"  method="POST">
 <tr>
 <td colspan="3"><div align="center">
-FIND BY RTM PART NUMBER:  <input type="text" name="rtm_pn" size="15" maxlength="10">
+FIND BY BTM PART NUMBER:  <input type="text" name="rtm_pn" size="15" maxlength="10">
 <input type="submit" name="action" id="action" value="FIND" /></div>
 </td>
 </tr>
@@ -669,7 +669,7 @@ template_list('ADD ITEM FROM TEMPLATE ', $template_id);
     <?php
     category_list($type2);
     ?>
-        <td>RTM PART NUMBER:<br /><input type="text" name="part_number"  size="15" maxlength="10" value="<?php if (isset($part_number)) { echo $part_number; } ?>"/></td>
+        <td>BTM PART NUMBER:<br /><input type="text" name="part_number"  size="15" maxlength="10" value="<?php if (isset($part_number)) { echo $part_number; } ?>"/></td>
         <td>YEAR:<br /><input type="text" name="year" size="15" maxlength="4" value="<?php if (isset($year)) { echo $year; } ?>" /></td>
         <td>
             <table border="0" cellpadding="0" cellspacing="0" >

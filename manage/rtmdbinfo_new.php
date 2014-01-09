@@ -11,7 +11,7 @@ if ('localhost' == $_SERVER['HTTP_HOST']) {  //this is my local host
     $host = 'localhost';
     $username = 'machinre_sari';
     $password = 'G00342899';
-    $database = 'btm_broker';
+    $database = 'machinre_btm_broker';
 }
 
 

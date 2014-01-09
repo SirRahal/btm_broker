@@ -79,7 +79,7 @@ class maxImageUpload {
 ?>
        <div id="container">
             <div id="header"><div id="header_left"></div>
-            <div id="header_main">RTM Image Uploader</div><div id="header_right"></div></div>
+            <div id="header_main">BTM Image Uploader</div><div id="header_right"></div></div>
             <div id="content">
 <?php
 if ($msg != ''){

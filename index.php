@@ -106,6 +106,10 @@ $part_name = $_GET['part_name'];
         height:26px;
         z-index: 10000;
     }
+    .banner_image{
+        width: 1155px;
+        margin: 0 auto;
+    }
 </style>
 
 <div class="menubar">
@@ -121,7 +125,9 @@ $part_name = $_GET['part_name'];
     </div>
 </div>
 <div class="banner">
-
+    <div class="banner_image">
+        <img src="BTM_BROKER_BANNER.png" width="305" style="margin-top: -12px;"/>
+    </div>
 </div>
 
 

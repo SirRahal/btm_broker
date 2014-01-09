@@ -1,5 +1,5 @@
 <?php
-define("tim_email", "tim@reliabletoolmachine.com");
-define("sales_email", "sales@reliabletoolmachine.com");
-define("paypal_email", "reliabletool@voyager.net");
+define("tim_email", "tim@btmindustrial.com.com");
+define("sales_email", "sales@btmindustrial.com");
+define("paypal_email", "paypal@btmindustrial.com");
 ?>

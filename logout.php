@@ -1,6 +1,6 @@
 <?php 
- setcookie("username", $_POST['username'], time()-60*60*24*365, '/', 'www.reliabletoolmachine.com');
- setcookie("password",  md5($_POST['password']),   time()-60*60*24*365, '/', 'www.reliabletoolmachine.com');
+ setcookie("username", $_POST['username'], time()-60*60*24*365, '/', 'www.btmbroker.com');
+ setcookie("password",  md5($_POST['password']),   time()-60*60*24*365, '/', 'www.btmbroker.com');
 session_start();        		
 $_SESSION = array(); 
 session_destroy(); 
