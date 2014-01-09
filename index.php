@@ -64,15 +64,7 @@ $part_name = $_GET['part_name'];
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 <meta name="keywords" content="Used CNC Machinery, Mazak, Metalworking machinery, Used Industrial Machinery"/>
 <meta name="description" content="BTM Broker"/>
-<title>RELIABLE TOOL &amp; MACHINE, INC
-<?php
-if (isset($cat ) & !isset($part_name))echo " - $cat ";
-if (isset($year ))echo " - $year ";
-if (isset($mfg ))echo " - $mfg ";
-if (isset($model ))echo " - $model ";
-if (isset($part_name ))echo " - $part_name ";
-?>
-</title>
+<title>BTM Broker</title>
 <style type="text/css" media="all">@import "css/index.css";</style>
 </head>
 <body>
