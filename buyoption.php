@@ -1,20 +1,20 @@
-<?php
+<?
 $paypal_email = constant("paypal_email");	
 ?>
 <form method="post" action="https://www.paypal.com/cgi-bin/webscr">
 <input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="<?php echo "$paypal_email"; ?>">
-<input type="hidden" name="item_name" value="<?php echo "$part_name"; ?>">
-<input type="hidden" name="item_number" value="<?php echo "$part_number"; ?>">
-<input type="hidden" name="amount" value="<?php echo "$price"; ?>">
+<input type="hidden" name="business" value="<? echo "$paypal_email"; ?>">
+<input type="hidden" name="item_name" value="<? echo "$part_name"; ?>">
+<input type="hidden" name="item_number" value="<? echo "$part_number"; ?>">
+<input type="hidden" name="amount" value="<?echo "$price"; ?>">
 <input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="shipping" value="<?php echo "$shipping"; ?>">
-<input type="hidden" name="shipping2" value="<?php echo "$shipping2"; ?>">
+<input type="hidden" name="shipping" value="<? echo "$shipping"; ?>">
+<input type="hidden" name="shipping2" value="<? echo "$shipping2"; ?>">
 <input type="hidden" name="handling" value="">
 <input type="hidden" name="no_shipping" value="2">
 <input type="hidden" name="image_url" value="">
 <input type="hidden" name="no_note" value="0">
-<input type="hidden" name="custom" value="<?php if (isset($mailid)){echo "$mailid";}?>">
+<input type="hidden" name="custom" value="<?if (isset($mailid)){echo "$mailid";}?>">
 <input type="hidden" name="invoice" value="">
 <input type="hidden" name="undefined_quantity" value="1">
 <?php	
@@ -22,22 +22,22 @@ $paypal_email = constant("paypal_email");
 ?>  
 QTY Ordered<br><br>
 <select name="quantity">
-<?php
+<?
 $m=1;
 while ($m <= $qty) {
 ?>
-	<option value="<?php echo "$m"; ?>"><?php echo "$m"; ?> </option>
-<?php
+	<option value="<? echo "$m"; ?>"><? echo "$m"; ?> </option>
+<?
 ++$m;
 } 
 ?>
 </select><br><br>
-<?php
+<?
 }
 else{
 ?>
 <input type="hidden" name="quantity" value="1">
-<?php
+<?
 }
 ?>
 <input type="hidden" name="cn" value="Message to Seller">

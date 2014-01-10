@@ -20,69 +20,18 @@ if ($admin==1){
 </head>
 <body>
 
-<style>
-    .menubar{
-        width:100%;
-        height:36px;
-        background: #666;
-        border-bottom:1px solid #000;
-        margin:0 auto;
-    }
-    .menuitems{
-        font-family: 'Droid Serif',serif;
-        width: 1165px;
-        margin:0 auto;
-    }
-    .menuitems a{
-        padding:8px;
-        float: left;
-        margin-left: 10px;
-        color: white;
-        font-size:14px;
-        font-weight: normal;
-        display: block
-    }
-    .menuitem a:hover{
-        color: #C3BBAD;
-        opacity: 1;
-        cursor:pointer;
-        background: #666;
-    }
-    .banner{
-        border-bottom:1px solid #000;
-        background:#333;
-        padding:2rem 0;
-        margin:0;
-        height:26px;
-        z-index: 10000;
-    }
-    .banner_image{
-        width: 1155px;
-        margin: 0 auto;
-    }
-</style>
+<!-- START OF HEADER SECTION -->
+<div id="Header">
 
-<div class="menubar">
 
-    <div class="menuitems">
-        <div class="menuitem"><a href="http://www.btmindustrial.com/">Home</a></div>
-        <div class="menuitem"><a href="http://auctions.btmindustrial.com/auctionlist.aspx">Auctions</a></div>
-        <div class="menuitem"><a href="http://www.btmbroker.com/">Broker</a></div><!--
-        <div class="menuitem"><a href="http://www.btmindustrial.com/what-we-do/asset-disposition">Asset Dispostion</a></div>
-        <div class="menuitem"><a href="http://www.btmindustrial.com/decommission-line-removal">Decommission & Line Removal</a></div>
-        <div class="menuitem"><a href="http://www.btmindustrial.com/machinery-moving-rigging">Machinery Moving & Rigging</a></div>-->
-        <div class="menuitem"><a href="http://www.btmindustrial.com/contact-us">Contact Us</a></div>
-    </div>
+<a href="../index.php"><img src="../home_logo.jpg" width="327" height="100" alt="" border="0" align="left"/>
+<img src="../home_right.jpg" width="479" height="100" alt="" border="0"align="right" /></a>
 </div>
-<div class="banner">
-    <div class="banner_image">
-        <img src="../BTM_BROKER_BANNER.png" width="305" style="margin-top: -12px;"/>
-    </div>
-</div>
-
+<!-- END OF HEADER SECTION -->
+<!-- START OF MAIN CONTENT SECTION -->
 <div id="Content">
-<div align="center"><?php include("seim.html");?></div>
-<?php
+<div align="center"><?include("seim.html");?></div>
+<?
 switch(@$_GET['ac'])
 {
 default:
@@ -133,17 +82,17 @@ break;
 
 <!--START MENU SECTION HERE-->
 <div id="Menu">
-<?php
+<?
 include("../login.php");
 ?> 
 <div id="Menu-box">
-<?php include ("left_menu.php");?>
+<? include ("left_menu.php");?>
 </div>
 </div>
 <!--END MENU SECTION HERE-->	
 </body>
 </html>
-<?php
+<?
 }
 else{
 

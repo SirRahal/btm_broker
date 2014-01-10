@@ -1,4 +1,4 @@
-<?php
+<?
 if ($machine==1)
 {
 $query = "SELECT * FROM `link` WHERE type<=6 ORDER BY id ASC LIMIT $page , 1"; 
@@ -96,22 +96,22 @@ $price = $price2;
 <table width="50%">  
 <tr>
 <td align="left" width="25%">
-<?php
+<? 
  if ($page<>0){
  ?>   
-<a href="index.php?ac=item&type=<?php echo $type_id?>&page=<?php echo $page-1?>&max=<?php echo $max?>&cat=<?php echo $cat?><?php if ($machine==1){echo"&machine=1";}?>"><p>PREVIOUS ITEM</p></a>
- <?php
+<a href="index.php?ac=item&type=<?=$type_id?>&page=<?=$page-1?>&max=<?=$max?>&cat=<?=$cat?><?if ($machine==1){echo"&machine=1";}?>"><p>PREVIOUS ITEM</p></a>
+ <?
  }
  ?>
 </td>
-<td align="center" width="50%"><a href="<?php if ($machine==1){echo"index.php?ac=machine";}else {?>index.php?ac=inventory&type=<?php echo $type_id?>&cat=<?php echo $cat?><?php}?>"><p><?php if ($machine==1){echo"MACHINE INVENTORY";}else {echo $cat;}?></p></a></td>
+<td align="center" width="50%"><a href="<?if ($machine==1){echo"index.php?ac=machine";}else {?>index.php?ac=inventory&type=<?=$type_id?>&cat=<?=$cat?><?}?>"><p><?if ($machine==1){echo"MACHINE INVENTORY";}else {echo $cat;}?></p></a></td>
 <td align="right" width="25%">
- <?php
+ <? 
  if ($page+1<>$max){
  ?>
    
-<a href="index.php?ac=item&type=<?php echo $type_id?>&page=<?php echo $page+1?>&max=<?php echo $max?>&cat=<?php echo $cat?><?php if ($machine==1){echo"&machine=1";}?>"><p>NEXT ITEM</p></a>
- <?php
+<a href="index.php?ac=item&type=<?=$type_id?>&page=<?=$page+1?>&max=<?=$max?>&cat=<?=$cat?><?if ($machine==1){echo"&machine=1";}?>"><p>NEXT ITEM</p></a>
+ <?
  }
  ?>
  </td> 
@@ -119,17 +119,17 @@ $price = $price2;
 </table> 
 </div>
 <div align="center">
-<?php
+<?
 if ($_SESSION['Admin']==1)
 {
 ?>
-<a href="manage/index.php?ac=edit_item&id=<?php echo $idp?>">Edit Item</a>
-<?php
+<a href="manage/index.php?ac=edit_item&id=<?=$idp?>">Edit Item</a>
+<?
 }
 
 ?>
 <h2>
-<?php echo "$year",' ',"$mfg",' ',"$model",' ',"$part_name"; ?>
+<? echo "$year",' ',"$mfg",' ',"$model",' ',"$part_name"; ?>
 
 </h2>
  <?php
@@ -150,66 +150,66 @@ else
 
 
 
-<a href="pic/normal/RTM Auction Machines <?php echo "$pic1"; ?>.jpg">
-<img src="pic/normal/RTM Auction Machines <?php echo "$pic1"; ?>.jpg" width="320" height="240" alt="" border="2" /></a>
+<a href="pic/normal/RTM Auction Machines <? echo "$pic1"; ?>.jpg">
+<img src="pic/normal/RTM Auction Machines <? echo "$pic1"; ?>.jpg" width="320" height="240" alt="" border="2" /></a>
 
 <h2>
-<?php echo "$year",' ',"$mfg",' ',"$model",' ',"$part_name"; ?>
+<? echo "$year",' ',"$mfg",' ',"$model",' ',"$part_name"; ?>
 </h2>
 
-BTM Part Number:  <?php echo "$part_number"; ?>
+BTM Part Number:  <? echo "$part_number"; ?>
 <br /><br />
 
 <table cellspacing="'4" Cellpadding="6" Border="2" width="75%">
 <tr>
-<td colspan="2"><h2><?php echo "$year",' ',"$mfg",' ',"$model",' ',"$part_name"; ?></h2></td>
+<td colspan="2"><h2><? echo "$year",' ',"$mfg",' ',"$model",' ',"$part_name"; ?></h2></td>
 </tr>
-<?php
+<? 
 if (strlen($disc_a1)!=0 || strlen($disc_a2)!=0 )
 {
 ?>
 <tr>
-<td align="left"><?php echo "$disc_a1"; ?></td>
-<td align="left"><?php echo "$disc_a2"; ?></td>
+<td align="left"><? echo "$disc_a1"; ?></td>
+<td align="left"><? echo "$disc_a2"; ?></td>
 </tr>
-<?php
+<?
 }
 ?>
-<?php
+<? 
 if (strlen($disc_b1)!=0 || strlen($disc_b2)!=0 )
 {
 ?>
 <tr>
-<td align="left"><?php echo "$disc_b1"; ?></td>
-<td align="left"><?php echo "$disc_b2"; ?></td>
+<td align="left"><? echo "$disc_b1"; ?></td>
+<td align="left"><? echo "$disc_b2"; ?></td>
 </tr>
-<?php
+<?
 }
 ?>
-<?php
+<? 
 if (strlen($disc_c1)!=0 || strlen($disc_c2)!=0 )
 {
 ?>
 <tr>
-<td align="left"><?php echo "$disc_c1"; ?></td>
-<td align="left"><?php echo "$disc_c2"; ?></td>
+<td align="left"><? echo "$disc_c1"; ?></td>
+<td align="left"><? echo "$disc_c2"; ?></td>
 </tr>
-<?php
+<?
 }
 ?>
-<?php
+<? 
 if (strlen($disc_d1)!=0 || strlen($disc_d2)!=0 )
 {
 ?>
 
 <tr>
-<td align="left"><?php echo "$disc_d1"; ?></td>
-<td align="left"><?php echo "$disc_d2"; ?></td>
+<td align="left"><? echo "$disc_d1"; ?></td>
+<td align="left"><? echo "$disc_d2"; ?></td>
 </tr>
-<?php
+<?
 }
 ?>
-<?php
+<? 
 if (strlen($disc_e1)!=0 || strlen($disc_e2)!=0 )
 {
 ?>
@@ -217,38 +217,38 @@ if (strlen($disc_e1)!=0 || strlen($disc_e2)!=0 )
 <td align="left"><? echo "$disc_e1"; ?></td>
 <td align="left"><? echo "$disc_e2"; ?></td>
 </tr>
-<?php
+<?
 }
 ?>
-<?php
+<? 
 if (strlen($disc_f1)!=0 || strlen($disc_f2)!=0 )
 {
 ?>
 <tr>
-<td align="left"><?php echo "$disc_f1"; ?></td>
-<td align="left"><?php echo "$disc_f2"; ?></td>
+<td align="left"><? echo "$disc_f1"; ?></td>
+<td align="left"><? echo "$disc_f2"; ?></td>
 </tr>
-<?php
+<?
 }
 ?>
-<?php
+<? 
 if (strlen($disc_g1)!=0 || strlen($disc_g2)!=0 )
 {
 ?>
 <tr>
-<td align="left"><?php echo "$disc_g1"; ?></td>
-<td align="left"><?php echo "$disc_g2"; ?></td>
+<td align="left"><? echo "$disc_g1"; ?></td>
+<td align="left"><? echo "$disc_g2"; ?></td>
 </tr>
-<?php
+<?
 }
 ?>
-<?php
+<? 
 if (strlen($disc_h1)!=0 || strlen($disc_h2)!=0 )
 {
 ?>
 <tr>
-<td align="left"><?php echo "$disc_h1"; ?></td>
-<td align="left"><?php echo "$disc_h2"; ?></td>
+<td align="left"><? echo "$disc_h1"; ?></td>
+<td align="left"><? echo "$disc_h2"; ?></td>
 </tr>
 <?php
 }	
@@ -266,7 +266,7 @@ else
 	<td align="left"><h2><u>Equipped With:</u></h2></td>
 </tr>
 <tr>
-	<td align="left"><textarea cols="75%" rows="15"><?php echo "$memo"; ?></textarea><br /><br /></td>
+	<td align="left"><textarea cols="75%" rows="15"><? echo "$memo"; ?></textarea><br /><br /></td>
 </tr>
 </table>
 <br />
@@ -284,7 +284,7 @@ else
 ?> 
 <A NAME="request"></a>
 <br /><br />
-<?php
+<?
 if ($type<=6)	
 include("quoteform.php");
 else
@@ -295,7 +295,7 @@ include("offerform.php");
 }
 ?>
 </div>
-<?php
+<?
 ++$i;
 } 
 ?>

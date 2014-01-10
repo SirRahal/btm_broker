@@ -1,4 +1,4 @@
-<?php
+<?
 // make sure our variables are empty   
   	$error = array();
   	$msg = "";
@@ -79,7 +79,7 @@ return (false);
 return (true);
 }
 </SCRIPT>
-<?php
+<?
 }
 else 	if ($edit_series=="yes"){
 ?>
@@ -96,7 +96,7 @@ return (false);
 return (true);
 }
 </SCRIPT>
-<?php
+<?
 }
 else{
 ?>
@@ -114,26 +114,26 @@ return (false);
 return (true);
 }
 </SCRIPT>
-<?php
+<?
 }
 ?>
 
 <br /><br />
-<?php
+<?
  if (isset($msg) && strlen(trim($msg)) > 0) {
 ?>
 <table width="75%" align="center"><tr><td>
-    <span class="message"><div align="center"> <?php echo $msg?> </div></span>
+    <span class="message"><div align="center"> <?=$msg?> </div></span>
 </td></tr></table>
-<?php
+<?
 }
 
 if (isset($error_msg) && strlen(trim($error_msg)) > 0) {
 ?>
 <table width="75%" align="center"><tr><td>
-    <span class="error"> <?php echo $error_msg?></span>
+    <span class="error"> <?=$error_msg?></span>
 </td></tr></table> 
-<?php
+<?
 } 
 ?> 
 
@@ -144,18 +144,18 @@ if (isset($error_msg) && strlen(trim($error_msg)) > 0) {
 <form action="<?php echo $_server['php-self'];?>" method="post" onsubmit="return Validate(this)">
 <table align="center" width="60%" cellspacing="2" cellpadding="2" border="1">
 <tr>
-	<th colspan="3" align="center"><?php if ($delete=="delete"){echo "DELETE";}else {echo"EDIT";}?> CATEGORY</th>
+	<th colspan="3" align="center"><?if ($delete=="delete"){echo "DELETE";}else {echo"EDIT";}?> CATEGORY</th>
 </tr>
-<?php
+<?
 category_list($type2);
 ?>
 <tr>
 	<td colspan="3" align="center">
-	<?php if ($delete=="delete"){echo "TYPE DELETE TO CONFIRM:";}else if ($edit_series=="yes"){} else {echo"NEW CATEGORY NAME:";}?>
-	<?php if ($edit_series<>"yes"){
+	<?if ($delete=="delete"){echo "TYPE DELETE TO CONFIRM:";}else if ($edit_series=="yes"){} else {echo"NEW CATEGORY NAME:";}?> 
+	<?if ($edit_series<>"yes"){
 	?>
 	<input type="text" name="category" size="40" maxlength="40" />	
-	<?php
+	<?
 	}
 	if ($delete=="delete"){
 	}
@@ -167,12 +167,12 @@ category_list($type2);
 	CHOOSE SERIES: 
 	<select name="series">
 	<option value="0">	--	  </option>
-<?php
+<?
 for ($i=65; $i <= 90; $i++) {
  $x = chr($i);
 ?>	
-	<option value="<?php echo $x?>">		 <?php echo $x?> </option>
-<?php
+	<option value="<?=$x?>">		 <?=$x?> </option>
+<?
 } 
 }
 ?>	
@@ -182,7 +182,7 @@ for ($i=65; $i <= 90; $i++) {
 	</td>
 </tr>
 
-<?php if ($delete=="delete"){
+<?if ($delete=="delete"){
 ?>
 <tr> 
 <td colspan="3" align="center"><br />
@@ -192,33 +192,33 @@ for ($i=65; $i <= 90; $i++) {
 	</tr>
 	<tr>
 	<td colspan="3" align="center"><br /><a href="index.php?ac=edit_cat"><h3>Edit Category</h3></a>
-	<?php if ($edit_series<>"yes"){
+	<?if ($edit_series<>"yes"){
 	?>
 	
 	<br>
 	<a href="index.php?ac=edit_cat&edit_series=yes"><h3>Edit Series</h3></a>
 	
-	<?php }?>
+	<?}?>
 	</td>
 </tr>
 
 	
-<?php
+<?
 }
 else {
 ?>
 <tr> 
 <td colspan="3" align="center"><br />
 	
-	<?php if ($edit_series<>"yes"){
+	<?if ($edit_series<>"yes"){
 	?>
 	<input type="submit" name="action" id="action" value="EDIT">
-	<?php
+	<?
 		}else
 		{
 		?>
 		<input type="submit" name="action" id="action" value="EDIT SERIES">
-		<?php
+		<?
 		}
 	?>
 	
@@ -226,22 +226,22 @@ else {
 </tr>
 <tr>
 	<td colspan="3" align="center"><br /><a href="index.php?ac=edit_cat&delete=delete"><h3>Delete Category</h3></a>
-	<?php if ($edit_series<>"yes"){
+	<?if ($edit_series<>"yes"){
 	?>	
 	<br>
 	<a href="index.php?ac=edit_cat&edit_series=yes"><h3>Edit Series</h3></a>	
-	<?php
+	<?
 	}
 	else {
 	?>
 	<br>
 	<a href="index.php?ac=edit_cat"><h3>Edit Category</h3></a>
-	<?php
+	<?
 	}
 	?>
 	</td>
 </tr>
-<?php
+<?
 }
 ?>
 

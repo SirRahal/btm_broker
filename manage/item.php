@@ -359,11 +359,11 @@ $msg="The item was Edited!";
 break;
 case 'CHOOSE TEMPLATE':
 $template_id = $_POST['template_id'];
-$query = "SELECT * FROM `template` WHERE id=$template_id";
+$query = "SELECT * FROM `template` WHERE id=$template_id"; 
 $result=mysql_query($query);
 $num2=mysql_numrows($result); 
 ?>
-<?php
+<?
 $i=0;
 while ($i < $num2) {
 $year=mysql_result($result,$i,"year");
@@ -519,23 +519,23 @@ $title=mysql_result($item_type,$m,"category");
 if (strlen($year)>0 || strlen($mfg)>0 || strlen($model)>0 || strlen($part_name)>0)
 {
 ?>
-<div align="center"><a href="../index.php?ac=item&id=<?php echo $id?>" class="hide">
-		<p class="about"><?php if (strlen($year)>0)echo "$year - ";?><?php if (strlen($mfg)>0)echo "$mfg - ";?><?php if (strlen($model)>0)echo "$model - ";?><?php if (strlen($part_name)>0)echo $part_name;?></p></a></div>
-<?php
+<div align="center"><a href="../index.php?ac=item&id=<?=$id?>" class="hide">
+		<p class="about"><?if (strlen($year)>0)echo "$year - ";?><?if (strlen($mfg)>0)echo "$mfg - ";?><?if (strlen($model)>0)echo "$model - ";?><?if (strlen($part_name)>0)echo $part_name;?></p></a></div>
+<?
 }
 if (isset($error_msg) && strlen(trim($error_msg)) > 0) {
 ?>
 <br><table width="75%" align="center"><tr><td>
-    <span class="error"> <?php echo $error_msg?></span>
+    <span class="error"> <?=$error_msg?></span>
 </td></tr></table> 
-<?php
+<?
 }  
       if (isset($msg) && strlen(trim($msg)) > 0) {
 ?>
 <br><table width="75%" align="center"><tr><td>
-    <span class="message"><div align="center"> <?php echo $msg?> </div></span>
+    <span class="message"><div align="center"> <?=$msg?> </div></span>
 </td></tr></table> 
-<?php
+<?
 }
 switch(@$_POST['action'])
 {
@@ -543,37 +543,37 @@ default:
 if ($editadd>0){
 ?>
 <div align="center">
-<a href="../index.php?ac=item&id=<?php echo $id?>">View Item</a>
+<a href="../index.php?ac=item&id=<?=$id?>">View Item</a>
 &nbsp;&nbsp;
-<a href="index.php?ac=template&id=<?php echo $id?>">Make Item Template</a>
+<a href="index.php?ac=template&id=<?=$id?>">Make Item Template</a>
 &nbsp;&nbsp;
-<a href="index.php?ac=multi_cat&id=<?php echo $id?>&type=<?php echo $type2?>&cat=<?php echo $title?>&year=<?php echo $year?>&mfg=<?php echo $mfg?>&model=<?php echo $model?>&part_name=<?php echo $part_name?>&part_number=<?php echo $part_number?>">Add to Other Category</a>
+<a href="index.php?ac=multi_cat&id=<?=$id?>&type=<?=$type2?>&cat=<?=$title?>&year=<?=$year?>&mfg=<?=$mfg?>&model=<?=$model?>&part_name=<?=$part_name?>&part_number=<?=$part_number?>">Add to Other Category</a>
 </div>	
-<?php
+<?
 }
 break;
 case 'EDIT':
 ?>
 <div align="center">
-<a href="../index.php?ac=item&id=<?php echo $id?>">View Item</a>
+<a href="../index.php?ac=item&id=<?=$id?>">View Item</a>
 &nbsp;&nbsp;
-<a href="index.php?ac=template&id=<?php echo $id?>">Make Item Template</a>
+<a href="index.php?ac=template&id=<?=$id?>">Make Item Template</a>
 &nbsp;&nbsp;
-<a href="index.php?ac=multi_cat&id=<?php echo $id?>&type=<?php echo $type2?>&cat=<?php echo $title?>&year=<?php echo $year?>&mfg=<?php echo $mfg?>&model=<?php echo $model?>&part_name=<?php echo $part_name?>&part_number=<?php echo $part_number?>">Add to Other Category</a>
+<a href="index.php?ac=multi_cat&id=<?=$id?>&type=<?=$type2?>&cat=<?=$title?>&year=<?=$year?>&mfg=<?=$mfg?>&model=<?=$model?>&part_name=<?=$part_name?>&part_number=<?=$part_number?>">Add to Other Category</a>
 </div>	
-<?php
+<?
 break;
 case 'ADD':
 if (empty($error)) { 
 ?>
 <div align="center">
-<a href="../index.php?ac=item&id=<?php echo $id?>">View Item</a>
+<a href="../index.php?ac=item&id=<?=$id?>">View Item</a>
 &nbsp;&nbsp;
-<a href="index.php?ac=template&id=<?php echo $id?>">Make Item Template</a>
+<a href="index.php?ac=template&id=<?=$id?>">Make Item Template</a>
 &nbsp;&nbsp;
-<a href="index.php?ac=multi_cat&id=<?php echo $id?>&type=<?php echo $type2?>&cat=<?php echo $title?>&year=<?php echo $year?>&mfg=<?php echo $mfg?>&model=<?php echo $model?>&part_name=<?php echo $part_name?>&part_number=<?php echo $part_number?>">Add to Other Category</a>
+<a href="index.php?ac=multi_cat&id=<?=$id?>&type=<?=$type2?>&cat=<?=$title?>&year=<?=$year?>&mfg=<?=$mfg?>&model=<?=$model?>&part_name=<?=$part_name?>&part_number=<?=$part_number?>">Add to Other Category</a>
 </div>	
-<?php
+<?
 }
 break;
 case 'CHOOSE TEMPLATE':
@@ -582,13 +582,13 @@ case 'FIND':
 if (strlen($_POST['rtm_pn'])>0){
 ?>
 <div align="center">
-<a href="../index.php?ac=item&id=<?php echo $id?>">View Item</a>
+<a href="../index.php?ac=item&id=<?=$id?>">View Item</a>
 &nbsp;&nbsp;
-<a href="index.php?ac=template&id=<?php echo $id?>">Make Item Template</a>
+<a href="index.php?ac=template&id=<?=$id?>">Make Item Template</a>
 &nbsp;&nbsp;
-<a href="index.php?ac=multi_cat&id=<?php echo $id?>&type=<?php echo $type2?>&cat=<?php echo $title?>&year=<?php echo $year?>&mfg=<?php echo $mfg?>&model=<?php echo $model?>&part_name=<?php echo $part_name?>&part_number=<?php echo $part_number?>">Add to Other Category</a>
+<a href="index.php?ac=multi_cat&id=<?=$id?>&type=<?=$type2?>&cat=<?=$title?>&year=<?=$year?>&mfg=<?=$mfg?>&model=<?=$model?>&part_name=<?=$part_name?>&part_number=<?=$part_number?>">Add to Other Category</a>
 </div>	
-<?php
+<?
 }
 break;
 case 'DELETE':
@@ -606,270 +606,273 @@ FIND BY BTM PART NUMBER:  <input type="text" name="rtm_pn" size="15" maxlength="
 </tr>
 </form>
 
-<?php
+<?
 template_list('ADD ITEM FROM TEMPLATE ', $template_id);
 ?>
 
 
 <form action="index.php?ac=edit_item" method="post" >
-    <input type="hidden" name="id"  value="<?php echo $id?>" />
-    <input type="hidden" name="type_id"  value="<?php echo $type2?>" />
-    <input type="hidden" name="part_number_check"  value="<?php echo $part_number?>" />
-    <?php
-    switch(@$_POST['action'])
-    {
-    default:
-    if ($editadd>0){
-    ?>
-    <tr><th colspan="3" align="center">	EDIT ITEM TO INVENTORY</th></tr>
-    <?php
-    }
-    else{
-    ?>
-    <tr><th colspan="3" align="center">	ADD ITEM TO INVENTORY</th></tr>
-    <?php
-    }
-    break;
-    case 'ADD':
-    ?>
-    <tr><th colspan="3" align="center">
-    <?php
-    if (empty($error)) {
-    ?>
-    <a href="index.php?ac=multi_cat&id=<?php echo $key?>&type=<?php echo $type2?>&cat=<?php echo $title?>&year=<?php echo $year?>&mfg=<?php echo $mfg?>&model=<?php echo $model?>&part_name=<?php echo $part_name?>">Add to Other Category</a>
-    <?php
-    }
-    ?>
-    EDIT ITEM TO INVENTORY	</th></tr>
-    <?php
-    break;
+<input type="hidden" name="id"  value="<?=$id?>" />
+<input type="hidden" name="type_id"  value="<?=$type2?>" />
+<input type="hidden" name="part_number_check"  value="<?=$part_number?>" />	
+<?	
+switch(@$_POST['action'])
+{
+default:
+if ($editadd>0){
+?>
+<tr><th colspan="3" align="center">	EDIT ITEM TO INVENTORY</th></tr>
+<?
+}
+else{
+?>
+<tr><th colspan="3" align="center">	ADD ITEM TO INVENTORY</th></tr>
+<?
+}
+break;
+case 'ADD':
+?>
+<tr><th colspan="3" align="center">
+<?
+if (empty($error)) { 
+?>	
+<a href="index.php?ac=multi_cat&id=<?=$key?>&type=<?=$type2?>&cat=<?=$title?>&year=<?=$year?>&mfg=<?=$mfg?>&model=<?=$model?>&part_name=<?=$part_name?>">Add to Other Category</a>	
+<?
+}
+?>
+EDIT ITEM TO INVENTORY	</th></tr>
+<?
+break;
 
-    case 'EDIT':
-    ?>
-    <tr><th colspan="3" align="center">	EDIT ITEM TO INVENTORY</th></tr>
-    <?php
-    break;
-    case 'CHOOSE TEMPLATE':
-    ?>
-    <tr><th colspan="3" align="center">	ADD ITEM TO INVENTORY FROM TEMPLATE</th></tr>
-    <?php
-    break;
-    case 'FIND':
-    ?>
-    <tr><th colspan="3" align="center">	EDIT ITEM TO INVENTORY</th></tr>
-    <?php
-    break;
-    case 'DELETE':
-    ?>
-    <tr><th colspan="3" align="center">	ADD ITEM TO INVENTORY</th></tr>
-    <?php
-    break;
-    }
-    ?>
-    <?php
-    category_list($type2);
-    ?>
-        <td>BTM PART NUMBER:<br /><input type="text" name="part_number"  size="15" maxlength="10" value="<?php if (isset($part_number)) { echo $part_number; } ?>"/></td>
-        <td>YEAR:<br /><input type="text" name="year" size="15" maxlength="4" value="<?php if (isset($year)) { echo $year; } ?>" /></td>
-        <td>
-            <table border="0" cellpadding="0" cellspacing="0" >
-                <tr>
-                    <td>PRICE:	</td>
-                    <td><input type="checkbox" name="include" value="Yes" <?php
+case 'EDIT':
+?>
+<tr><th colspan="3" align="center">	EDIT ITEM TO INVENTORY</th></tr>
+<?
+break;
+case 'CHOOSE TEMPLATE':
+?>
+<tr><th colspan="3" align="center">	ADD ITEM TO INVENTORY FROM TEMPLATE</th></tr>
+<?
+break;
+case 'FIND':
+?>
+<tr><th colspan="3" align="center">	EDIT ITEM TO INVENTORY</th></tr>
+<?
+break;
+case 'DELETE':
+?>
+<tr><th colspan="3" align="center">	ADD ITEM TO INVENTORY</th></tr>
+<?
+break;
+}
+?>	
+<?
+category_list($type2);
+?>
+	<td>BTM PART NUMBER:<br /><input type="text" name="part_number"  size="15" maxlength="10" value="<?php if (isset($part_number)) { echo $part_number; } ?>"/></td>
+	<td>YEAR:<br /><input type="text" name="year" size="15" maxlength="4" value="<?php if (isset($year)) { echo $year; } ?>" /></td>
+	<td>	
+		<table border="0" cellpadding="0" cellspacing="0" >
+			<tr>
+				<td>PRICE:	</td>
+				<td><input type="checkbox" name="include" value="Yes" <?php
+	
+	if ($include=='Yes')  
+	echo "checked"; 
 
-        if ($include=='Yes')
-        echo "checked";
+?>  /><sup>On Site</sup></td>
+			</tr>
+	
+			<tr>
+				<td><input type="text" name="price"  size="15" maxlength="15" value="<?php if (isset($price)) { echo $price; } ?>" /></td>
+				<td><input type="checkbox" name="offer" value="Yes" <?php
+	
+	if ($offer=='Yes')  
+	echo "checked"; 
+ 
+?>  /><sup>Offers</sup>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td>MFG:<br /><input type="text" name="mfg"  size="30" maxlength="30" value="<?php if (isset($mfg)) { echo $mfg; } ?>" /></td>
+	<td>MODEL:<br /><input type="text" name="model"  size="30" maxlength="30" value="<?php if (isset($model)) { echo $model; } ?>" /></td>
+	<td>PART NAME:<br /><input type="text" name="part_name"  size="30" maxlength="30" value="<?php if (isset($part_name)) { echo $part_name; } ?>" /></td>
+</tr>
+<tr>
+	<td>PIC FILE NAME:<br /><input type="text" name="pic1"  size="15" maxlength="15" value="<?php if (isset($pic1)) { echo $pic1; } ?>" /></td>
+	<td>SERIAL NUMBER:<br /><input type="text" name="sernum" size="30" maxlength="30" value="<?php if (isset($sernum)) { echo $sernum; } ?>" /></td>
+	<td>
+	<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+	<td align="left">SHIPPING:</td>
+	<td align="left">ADD PER:</td>
+</tr>
+<tr>
+	<td><input type="text" name="shipping" size="15" maxlength="15" value="<?php if (isset($shipping)) { echo $shipping; } ?>" /></td>
+	<td><input type="text" name="shipping2" size="10" maxlength="15" value="<?php if (isset($shipping2)) { echo $shipping2; } ?>" /></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+	<td></td>
+	<td><input type="text" name="disc_a1" size="30" maxlength="30" value="<?php if (isset($disc_a1)) { echo $disc_a1; } ?>" /></td>
+	<td><input type="text" name="disc_a2" size="30" maxlength="30" value="<?php if (isset($disc_a2)) { echo $disc_a2; } ?>" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td><input type="text" name="disc_b1" size="30" maxlength="30" value="<?php if (isset($disc_b1)) { echo $disc_b1; } ?>" /></td>
+	<td><input type="text" name="disc_b2" size="30" maxlength="30" value="<?php if (isset($disc_b2)) { echo $disc_b2; } ?>" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td><input type="text" name="disc_c1" size="30" maxlength="30" value="<?php if (isset($disc_c1)) { echo $disc_c1; } ?>" /></td>
+	<td><input type="text" name="disc_c2" size="30" maxlength="30" value="<?php if (isset($disc_c2)) { echo $disc_c2; } ?>" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td><input type="text" name="disc_d1" size="30" maxlength="30" value="<?php if (isset($disc_d1)) { echo $disc_d1; } ?>" /></td>
+	<td><input type="text" name="disc_d2" size="30" maxlength="30" value="<?php if (isset($disc_d2)) { echo $disc_d2; } ?>" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td><input type="text" name="disc_e1" size="30" maxlength="30" value="<?php if (isset($disc_e1)) { echo $disc_e1; } ?>" /></td>
+	<td><input type="text" name="disc_e2" size="30" maxlength="30" value="<?php if (isset($disc_e2)) { echo $disc_e2; } ?>" /></td>
+</tr>
+<tr>
+	<td><input type="hidden" name="sold" value="no" /></td>
+	<td><input type="text" name="disc_f1" size="30" maxlength="30" value="<?php if (isset($disc_f1)) { echo $disc_f1; } ?>" /></td>
+	<td><input type="text" name="disc_f2" size="30" maxlength="30" value="<?php if (isset($disc_f2)) { echo $disc_f2; } ?>" /></td>
+</tr>
+<tr>
+	<td>
+	<?php if (isset($date)) { ?> 
+	DATE ENTERED:<br /><input type="text" name="date"  size="15" maxlength="15" value="<? echo "$date"; ?>" />
+	<?
+	} 
+	?>
+	 </td>
+	<td><input type="text" name="disc_g1" size="30" maxlength="30" value="<?php if (isset($disc_g1)) { echo $disc_g1; } ?>" /></td>
+	<td><input type="text" name="disc_g2" size="30" maxlength="30" value="<?php if (isset($disc_g2)) { echo $disc_g2; } ?>" /></td>
+</tr>
+<tr>
+	<td>
+		<?php if (isset($sold)) { ?> 
+	Sold:  <input type="checkbox" name="sold" value="Yes" <?php	
+	if ($sold==Yes)  
+	echo "checked"; ?> 	 />
+	<?
+	} 
+	?>
+	
+	</td>
+	<td><input type="text" name="disc_h1" size="30" maxlength="30" value="<?php if (isset($disc_h1)) { echo $disc_h1; } ?>" /></td>
+	<td><input type="text" name="disc_h2" size="30" maxlength="30" value="<?php if (isset($disc_h2)) { echo $disc_h2; } ?>" /></td>
+</tr>
+<tr>
+	<td></td>
+	<td>QTY</td>
+	<td><input type="text" name="qty" size="10" maxlength="4" value="<?php if (isset($qty)) { echo $qty; } ?>" /></td>
+	
+</tr>
+<tr>
+	<td colspan="3" align="center"><textarea cols="75%" rows="10" name="memo"> <?php if (isset($memo)) { echo $memo; } ?></textarea></td>
+</tr>
+<tr>
+	<td colspan="3" align="center"><br />
+<?
+switch(@$_POST['action'])
+{
+default:
+if ($editadd>0){
+?>
+	<input type="submit" name="action" id="action" value="EDIT" />
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" name="action" id="action" value="DELETE" onclick="return confirm('Are you sure you want to delete Part Number <?=$part_number?>?');"/>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" name="action" id="action" value="SIMILAR" />
+	<br /><br />
+<?
+}
+else
+{
+?>
+	<input type="submit" name="action" id="action" value="ADD" /><br /><br />
+<?
+}
+break;
+case 'EDIT':
+?>
+	<input type="submit" name="action" id="action" value="EDIT" />
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" name="action" id="action" value="DELETE" onclick="return confirm('Are you sure you want to delete Part Number <?=$part_number?>?');"/>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" name="action" id="action" value="SIMILAR" />
+	<br /><br />
+<?
+break;
+case 'ADD':
+if (empty($error)) { 
+?>
+	<input type="submit" name="action" id="action" value="EDIT" />
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" name="action" id="action" value="DELETE" onclick="return confirm('Are you sure you want to delete Part Number <?=$part_number?>?');"/>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" name="action" id="action" value="SIMILAR" />
+	<br /><br />
+<?
+}
+else
+{
+?>
+<input type="submit" name="action" id="action" value="ADD" /><br /><br />
+<?
+}
+break;
+case 'CHOOSE TEMPLATE':
+?>
+	<input type="submit" name="action" id="action" value="ADD" /><br /><br />
+<?
+break;
+case 'FIND':
+if (strlen($_POST['rtm_pn'])>0){
+?>
+	<input type="submit" name="action" id="action" value="EDIT" />
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" name="action" id="action" value="DELETE" onclick="return confirm('Are you sure you want to delete Part Number <?=$part_number?>?');"/>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" name="action" id="action" value="SIMILAR" />
 
-    ?>  /><sup>On Site</sup></td>
-                </tr>
+	<br /><br />
+<?
+}
+else
+{
+?>
+	<input type="submit" name="action" id="action" value="ADD" /><br /><br />
+<?
 
-                <tr>
-                    <td><input type="text" name="price"  size="15" maxlength="15" value="<?php if (isset($price)) { echo $price; } ?>" /></td>
-                    <td><input type="checkbox" name="offer" value="Yes" <?php
-
-        if ($offer=='Yes')
-        echo "checked";
-
-    ?>  /><sup>Offers</sup>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td>MFG:<br /><input type="text" name="mfg"  size="30" maxlength="30" value="<?php if (isset($mfg)) { echo $mfg; } ?>" /></td>
-        <td>MODEL:<br /><input type="text" name="model"  size="30" maxlength="30" value="<?php if (isset($model)) { echo $model; } ?>" /></td>
-        <td>PART NAME:<br /><input type="text" name="part_name"  size="30" maxlength="30" value="<?php if (isset($part_name)) { echo $part_name; } ?>" /></td>
-    </tr>
-    <tr>
-        <td>PIC FILE NAME:<br /><input type="text" name="pic1"  size="15" maxlength="15" value="<?php if (isset($pic1)) { echo $pic1; } ?>" /></td>
-        <td>SERIAL NUMBER:<br /><input type="text" name="sernum" size="30" maxlength="30" value="<?php if (isset($sernum)) { echo $sernum; } ?>" /></td>
-        <td>
-        <table cellspacing="0" cellpadding="0" border="0">
-    <tr>
-        <td align="left">SHIPPING:</td>
-        <td align="left">ADD PER:</td>
-    </tr>
-    <tr>
-        <td><input type="text" name="shipping" size="15" maxlength="15" value="<?php if (isset($shipping)) { echo $shipping; } ?>" /></td>
-        <td><input type="text" name="shipping2" size="10" maxlength="15" value="<?php if (isset($shipping2)) { echo $shipping2; } ?>" /></td>
-    </tr>
-    </table>
-    </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><input type="text" name="disc_a1" size="30" maxlength="30" value="<?php if (isset($disc_a1)) { echo $disc_a1; } ?>" /></td>
-        <td><input type="text" name="disc_a2" size="30" maxlength="30" value="<?php if (isset($disc_a2)) { echo $disc_a2; } ?>" /></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><input type="text" name="disc_b1" size="30" maxlength="30" value="<?php if (isset($disc_b1)) { echo $disc_b1; } ?>" /></td>
-        <td><input type="text" name="disc_b2" size="30" maxlength="30" value="<?php if (isset($disc_b2)) { echo $disc_b2; } ?>" /></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><input type="text" name="disc_c1" size="30" maxlength="30" value="<?php if (isset($disc_c1)) { echo $disc_c1; } ?>" /></td>
-        <td><input type="text" name="disc_c2" size="30" maxlength="30" value="<?php if (isset($disc_c2)) { echo $disc_c2; } ?>" /></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><input type="text" name="disc_d1" size="30" maxlength="30" value="<?php if (isset($disc_d1)) { echo $disc_d1; } ?>" /></td>
-        <td><input type="text" name="disc_d2" size="30" maxlength="30" value="<?php if (isset($disc_d2)) { echo $disc_d2; } ?>" /></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><input type="text" name="disc_e1" size="30" maxlength="30" value="<?php if (isset($disc_e1)) { echo $disc_e1; } ?>" /></td>
-        <td><input type="text" name="disc_e2" size="30" maxlength="30" value="<?php if (isset($disc_e2)) { echo $disc_e2; } ?>" /></td>
-    </tr>
-    <tr>
-        <td><input type="hidden" name="sold" value="no" /></td>
-        <td><input type="text" name="disc_f1" size="30" maxlength="30" value="<?php if (isset($disc_f1)) { echo $disc_f1; } ?>" /></td>
-        <td><input type="text" name="disc_f2" size="30" maxlength="30" value="<?php if (isset($disc_f2)) { echo $disc_f2; } ?>" /></td>
-    </tr>
-    <tr>
-        <td>
-        <?php if (isset($date)) { ?>
-        DATE ENTERED:<br /><input type="text" name="date"  size="15" maxlength="15" value="<?php echo "$date"; ?>" />
-        <?php
-        }
-        ?>
-         </td>
-        <td><input type="text" name="disc_g1" size="30" maxlength="30" value="<?php if (isset($disc_g1)) { echo $disc_g1; } ?>" /></td>
-        <td><input type="text" name="disc_g2" size="30" maxlength="30" value="<?php if (isset($disc_g2)) { echo $disc_g2; } ?>" /></td>
-    </tr>
-    <tr>
-        <td>
-            <?php if (isset($sold)) { ?>
-        Sold:  <input type="checkbox" name="sold" value="Yes" <?php
-        if ($sold==Yes)
-        echo "checked"; ?> 	 />
-        <?php
-        }
-        ?>
-
-        </td>
-        <td><input type="text" name="disc_h1" size="30" maxlength="30" value="<?php if (isset($disc_h1)) { echo $disc_h1; } ?>" /></td>
-        <td><input type="text" name="disc_h2" size="30" maxlength="30" value="<?php if (isset($disc_h2)) { echo $disc_h2; } ?>" /></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>QTY</td>
-        <td><input type="text" name="qty" size="10" maxlength="4" value="<?php if (isset($qty)) { echo $qty; } ?>" /></td>
-
-    </tr>
-    <tr>
-        <td colspan="3" align="center"><textarea cols="75%" rows="10" name="memo"> <?php if (isset($memo)) { echo $memo; } ?></textarea></td>
-    </tr>
-    <tr>
-        <td colspan="3" align="center"><br />
-    <?php
-    switch(@$_POST['action'])
-    {
-    default:
-    if ($editadd>0){
-    ?>
-        <input type="submit" name="action" id="action" value="EDIT" />
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="submit" name="action" id="action" value="DELETE" onclick="return confirm('Are you sure you want to delete Part Number <?php echo $part_number?>?');"/>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="submit" name="action" id="action" value="SIMILAR" />
-        <br /><br />
-    <?php
-    }
-    else
-    {
-    ?>
-        <input type="submit" name="action" id="action" value="ADD" /><br /><br />
-    <?php
-    }
-    break;
-    case 'EDIT':
-    ?>
-        <input type="submit" name="action" id="action" value="EDIT" />
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="submit" name="action" id="action" value="DELETE" onclick="return confirm('Are you sure you want to delete Part Number <?php echo $part_number?>?');"/>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="submit" name="action" id="action" value="SIMILAR" />
-        <br /><br />
-    <?php
-    break;
-    case 'ADD':
-    if (empty($error)) {
-    ?>
-        <input type="submit" name="action" id="action" value="EDIT" />
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="submit" name="action" id="action" value="DELETE" onclick="return confirm('Are you sure you want to delete Part Number <?php echo $part_number?>?');"/>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="submit" name="action" id="action" value="SIMILAR" />
-        <br /><br />
-    <?php
-    }
-    else
-    {
-    ?>
-    <input type="submit" name="action" id="action" value="ADD" /><br /><br />
-    <?php
-    }
-    break;
-    case 'CHOOSE TEMPLATE':
-    ?>
-        <input type="submit" name="action" id="action" value="ADD" /><br /><br />
-    <?php
-    break;
-    case 'FIND':
-    if (strlen($_POST['rtm_pn'])>0){
-    ?>
-        <input type="submit" name="action" id="action" value="EDIT" />
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="submit" name="action" id="action" value="DELETE" onclick="return confirm('Are you sure you want to delete Part Number <?php echo $part_number?>?');"/>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="submit" name="action" id="action" value="SIMILAR" />
-
-        <br /><br />
-    <?php
-    }
-    else
-    {
-    ?>
-        <input type="submit" name="action" id="action" value="ADD" /><br /><br />
-    <?php
-
-    }
-    break;
-    case 'DELETE':
-    ?>
-        <input type="submit" name="action" id="action" value="ADD" /><br /><br />
-    <?php
-    break;
-    }
-    ?>
-
-        </td>
-
-
-    </tr>
-    </table>
+}
+break;
+case 'DELETE':
+?>
+	<input type="submit" name="action" id="action" value="ADD" /><br /><br />
+<?
+break;
+}
+?>	
+	
+	</td>
+	
+	
+	
+	
+	
+</tr>
+</table>
 
 
 </form>

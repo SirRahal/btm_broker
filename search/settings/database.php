@@ -1,7 +1,7 @@
 <?php
-	$database="search";
-	$mysql_user = "";
-	$mysql_password = ""; 
+	$database="machinre_search";
+	$mysql_user = "machinre_sari";
+	$mysql_password = "G00342899";
 	$mysql_host = "localhost";
 	$mysql_table_prefix = "";
 
@@ -16,4 +16,3 @@
 		die();
 	}
 ?>
-

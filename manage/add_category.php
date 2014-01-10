@@ -41,13 +41,13 @@ return (true);
 </SCRIPT>
 
 <br /><br />
-<?php
+<?
  if (isset($msg) && strlen(trim($msg)) > 0) {
 ?>
 <table width="75%" align="center"><tr><td>
-    <span class="message"><div align="center"> <?php echo $msg?> </div></span>
+    <span class="message"><div align="center"> <?=$msg?> </div></span>
 </td></tr></table>
-<?php
+<?
 }
 ?>
 <form action="<?php echo $_server['php-self'];?>" method="post" onsubmit="return Validate(this)">
@@ -62,12 +62,12 @@ return (true);
 	<td colspan="3" align="center">CHOOSE SERIES: 
 	<select name="series">
 	<option value="0">	--	  </option>
-<?php
+<?
 for ($i=65; $i <= 90; $i++) {
  $x = chr($i);
 ?>	
-	<option value="<?php echo $x?>">		 <?php echo $x?> </option>
-<?php
+	<option value="<?=$x?>">		 <?=$x?> </option>
+<?
 } 
 ?>	
 	

@@ -1,9 +1,16 @@
-
 <br />
 	<UL STYLE="list-style-image: url(green_bullet.gif)">
-   	<LI> <h4>We buy, sell and broker machines Tooling Electrical parts. We are a full service machinery and tooling dealer!
-</h4>
-   	<LI> <h4>Turn your surplus machinery or tooling into cash!!  </h4>
-   	<LI> <h4>Experience in the trade, not just salesman!</h4>
- 	<LI> <h4>See our machine and tooling inventory page for just some of our inventory.</h4>
+   	<div style="position: absolute;">
+    <br><br><br>
+        <h4>
+            Welcome to the BTM Broker Site!
+            <br>
+            We understand that not every machine is ready to be sold through auction,<br>
+            so here you will find machines on customers floors available for purchase!<br>
+            Rates to seller are as low as 4% and our service is extremely straightforward.<br>
+            Take a look and hopefully you will find what you need, and please keep <br>
+            BTM Industrial in mind for all your machinery needs!
+        </h4>
+
+</div>
 </UL>
