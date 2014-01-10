@@ -7,7 +7,7 @@ if ('localhost' == $_SERVER['HTTP_HOST']) {  //this is my local host
     $username="root";
     $password="";
     $database="btm_broker";
-    }else{
+}else{
     $host = 'localhost';
     $username = 'machinre_sari';
     $password = 'G00342899';
@@ -21,4 +21,3 @@ mysql_select_db($database, $db) or die( "Unable to select database,
           correct and then run this page again.");
 
 ?>
-
